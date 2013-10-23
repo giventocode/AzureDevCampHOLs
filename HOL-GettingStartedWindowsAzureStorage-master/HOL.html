@@ -1,0 +1,2142 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<title>Markdown Preview</title>
+<style>
+body{font-family:helvetica, arial, freesans, clean, sans-serif;color:#333;line-height:1.6;font-size:14px}.markdown-body{line-height:1.6;font-size:14px}.markdown-body > *:first-child{margin-top:0 !important}.markdown-body > *:last-child{margin-bottom:0 !important}.markdown-body a.absent{color:#c00}.markdown-body h1{font-weight:700;-webkit-font-smoothing:antialiased;color:#000;font-size:28px;margin:20px 0 10px;padding:0}.markdown-body h2{font-weight:700;-webkit-font-smoothing:antialiased;color:#000;font-size:24px;border-bottom-color:#ccc;border-bottom-width:1px;border-bottom-style:solid;margin:20px 0 10px;padding:0}.markdown-body h3{font-weight:700;-webkit-font-smoothing:antialiased;font-size:18px;margin:20px 0 10px;padding:0}.markdown-body h4{font-weight:700;-webkit-font-smoothing:antialiased;font-size:16px;margin:20px 0 10px;padding:0}.markdown-body h5{font-weight:700;-webkit-font-smoothing:antialiased;font-size:14px;margin:20px 0 10px;padding:0}.markdown-body h6{font-weight:700;-webkit-font-smoothing:antialiased;color:#777;font-size:14px;margin:20px 0 10px;padding:0}.markdown-body blockquote{color:#777;border-left-color:#ddd;border-left-width:4px;border-left-style:solid;margin:15px 0;padding:0 15px}.markdown-body dl{margin:15px 0;padding:0}.markdown-body table{border-collapse:collapse;margin:15px 0;padding:0}.markdown-body pre{border-radius:3px;border:1px solid #ccc;line-height:19px;overflow:auto;font-size:13px;background-color:#f8f8f8;margin:15px 0;padding:6px 10px}.markdown-body li p.first{display:inline-block}.markdown-body dl dt{font-size:14px;font-style:italic;font-weight:700;margin:15px 0 5px;padding:0}.markdown-body dl dt:first-child{padding:0}.markdown-body dl dd{margin:0 0 15px;padding:0 15px}.markdown-body table tr{border-top-color:#ccc;border-top-width:1px;border-top-style:solid;background-color:#fff;margin:0;padding:0}.markdown-body table tr:nth-child(2n){background-color:#f8f8f8}.markdown-body img{max-width:100%}.markdown-body span.frame{overflow:hidden;display:block}.markdown-body span.frame > span{border:1px solid #ddd;width:auto;overflow:hidden;float:left;display:block;margin:13px 0 0;padding:7px}.markdown-body span.frame span img{float:left;display:block}.markdown-body span.frame span span{color:#333;clear:both;display:block;padding:5px 0 0}.markdown-body span.align-center > span{text-align:center;overflow:hidden;display:block;margin:13px auto 0}.markdown-body span.align-center span img{text-align:center;margin:0 auto}.markdown-body span.align-right > span{text-align:right;overflow:hidden;display:block;margin:13px 0 0}.markdown-body span.align-right span img{text-align:right;margin:0}.markdown-body span.float-left{overflow:hidden;margin-right:13px;float:left;display:block}.markdown-body span.float-left span{margin:13px 0 0}.markdown-body span.float-right{overflow:hidden;margin-left:13px;float:right;display:block}.markdown-body span.float-right > span{text-align:right;overflow:hidden;display:block;margin:13px auto 0}.markdown-body pre > code{border:currentColor;white-space:pre;margin:0;padding:0}.markdown-body .highlight pre{border-radius:3px;border:1px solid #ccc;line-height:19px;overflow:auto;font-size:13px;background-color:#f8f8f8;padding:6px 10px}.markdown-body p,.markdown-body li{margin:15px 0}.markdown-body ul,.markdown-body ol{padding-left:30px;margin:15px 0}.markdown-body > h2:first-child,.markdown-body > h1:first-child,.markdown-body > h1:first-child + h2{border:0 currentColor;padding-top:0;margin-top:0}.markdown-body > h3:first-child,.markdown-body > h4:first-child,.markdown-body > h5:first-child,.markdown-body > h6:first-child{padding-top:0;margin-top:0}.markdown-body h1 + p,.markdown-body h2 + p,.markdown-body h3 + p,.markdown-body h4 + p,.markdown-body h5 + p,.markdown-body h6 + p,.markdown-body ul li > :first-child,.markdown-body ol li > :first-child,.markdown-body dl dt > :first-child,.markdown-body dl dd > :first-child,.markdown-body blockquote > :first-child,.markdown-body table tr th > :first-child,.markdown-body table tr td > :first-child{margin-top:0}.markdown-body ul li > :last-child,.markdown-body ol li > :last-child,.markdown-body dl dt > :last-child,.markdown-body dl dd > :last-child,.markdown-body blockquote > :last-child,.markdown-body table tr th > :last-child,.markdown-body table tr td > :last-child{margin-bottom:0}.markdown-body table tr th,.markdown-body table tr td{border:1px solid #ccc;text-align:left;margin:0;padding:6px 13px}.markdown-body span.align-center,.markdown-body span.align-right{overflow:hidden;clear:both;display:block}.markdown-body code,.markdown-body tt{border-radius:3px;border:1px solid #eaeaea;white-space:nowrap;background-color:#f8f8f8;margin:0 2px;padding:0 5px}.markdown-body pre code,.markdown-body pre tt{border:currentColor;background-color:transparent}span.codelanguage{display:none}
+</style>
+</head>
+<body>
+<div class="markdown-body">
+<p><a name="Title"></a></p>
+
+<h1 id="Getting_Started_With_Windows_Azure_Storage">Getting Started With Windows Azure Storage</h1>
+
+<hr>
+
+<p><a name="Overview"></a></p>
+
+<h2 id="Overview">Overview</h2>
+
+<p>In this lab, you will learn the basics of <strong>Windows Azure Storage</strong>, how to create and configure storage accounts and how you can programmatically access the different types of storage service. <strong>Blobs</strong>, <strong>Tables</strong>, and <strong>Queues</strong> are all available as part of the <strong>Windows Azure Storage</strong> account, and provide durable storage on the Windows Azure platform. These services are accessible from both inside and outside the Windows Azure platform by using the <a href="http://msdn.microsoft.com/en-us/library/microsoft.windowsazure.storageclient.aspx">Windows Azure Storage Client SDK</a>, or via URI using <a href="http://msdn.microsoft.com/en-us/library/dd179355.aspx">REST APIs</a>.</p>
+
+<p>You will learn how the following services work:</p>
+
+<p><img src="Images/storage-diagram.png?raw=true" alt="storage-diagram">
+</p>
+
+<p><strong>Table Storage</strong></p>
+
+<p>Table storage is a collection of row like entities, each of which can contain up to 255 properties. There is no schema that enforces a certain set of values on all the rows within a table, unlike tables in a database. It does not provide any way to represent relationships between data. Windows Azure Storage tables are more like rows within a spreadsheet application such as Excel than rows within a database such as SQL Database, in that each row can contain a different number of columns, and different data types, than the other rows in the same table.</p>
+
+<p><strong>Blob Storage</strong></p>
+
+<p>Blobs provide a way to store large amounts of unstructured, binary data, such as video, audio, images, etc.  One of the features of blobs is streaming content such as video or audio.</p>
+
+<p><strong>Queue Storage</strong>
+Queues provide storage for passing messages between applications. Messages stored to the queue are limited to a maximum of 8KB in size, and are generally stored and retrieved on a first in, first out (FIFO) basis (however FIFO is not guaranteed). Processing messages from a queue is a two stage process, which involves getting the message, and then deleting the message after it has been processed.  This pattern allows you to implement guaranteed message delivery by leaving the message in the queue until it has been fully processed.</p>
+
+<p><a name="Objectives"></a></p>
+
+<h3 id="Objectives">Objectives</h3>
+
+<p>In this hands-on lab, you will learn how to:</p>
+
+<ul>
+<li>Create an Storage Account.</li>
+<li>Learn the different configuration options for Geo-Replication, Monitoring and Logging.</li>
+<li>Access to Tables, Blobs and Queues using <strong>Windows Azure SDK 2.0</strong> in a MVC Web Application.</li>
+</ul>
+
+<p><a name="Prerequisites"></a></p>
+
+<h3 id="Prerequisites">Prerequisites</h3>
+
+<p>The following is required to complete this hands-on lab:</p>
+
+<ul>
+<li><a href="http://msdn.microsoft.com/vstudio/products/">Microsoft Visual Studio Express 2012 for Web</a></li>
+<li><a href="http://www.microsoft.com/windowsazure/sdk/">Windows Azure Tools for Microsoft Visual Studio 2.0</a></li>
+<li>A Windows Azure subscription - <a href="http://aka.ms/WATK-FreeTrial">sign up for a free trial</a></li>
+</ul>
+
+<p><a name="Setup"></a></p>
+
+<h3 id="Setup">Setup</h3>
+
+<p>In order to execute the exercises in this hands-on lab you need to set up your environment.</p>
+
+<ol>
+<li><p>Open a Windows Explorer window and browse to the  <strong>Source</strong> folder of this lab.</p></li>
+<li><p>Execute the <strong>Setup.cmd</strong> file with Administrator privileges to launch the setup process. This process will configure your environment and install the Visual Studio code snippets for this lab.</p></li>
+<li><p>If the User Account Control dialog is shown, confirm the action to proceed.</p></li>
+</ol>
+<blockquote>
+<p><strong>Note:</strong> Make sure you have checked all the dependencies for this lab before running the setup.</p>
+</blockquote>
+<p><a name="UsingCodeSnippets"></a></p>
+
+<h3 id="Using_the_Code_Snippets">Using the Code Snippets</h3>
+
+<p>Throughout the lab document, you will be instructed to insert code blocks. For your convenience, most of this code is provided as Visual Studio Code Snippets, which you can use from within Visual Studio 2012 to avoid having to add it manually. </p>
+
+<hr>
+
+<p><a name="Exercises"></a></p>
+
+<h2 id="Exercises">Exercises</h2>
+
+<p>This hands-on lab includes the following exercises:</p>
+
+<ol>
+<li> <a href="#Exercise1">Exercise 1 - Creating a Windows Azure Storage Account</a></li>
+<li> <a href="#Exercise2">Exercise 2 - Managing a Windows Azure Storage Account</a></li>
+<li> <a href="#Exercise3">Exercise 3 - Understanding the Windows Azure Storage Abstractions</a></li>
+<li> <a href="#Exercise4">Exercise 4 - Introducing SAS (Shared Access Signature)</a></li>
+<li> <a href="#Exercise5">Exercise 5 - Updating SAS to use Stored Access Policies</a></li>
+</ol>
+<blockquote>
+<p><strong>Note:</strong> Each exercise is accompanied by a starting solution. These solutions are missing some code sections that are to be completed throughout each exercise and therefore will not necessarily work if you run them directly.
+Inside each exercise you will also find an end folder with the solution you should obtain after completing the exercises. You can use this solution as a guide if you need additional help working through the exercises.</p>
+</blockquote>
+<p>Estimated time to complete this lab: <strong>60</strong> minutes.</p>
+<blockquote>
+<p><strong>Note:</strong> When you first start Visual Studio, you must select one of the predefined settings collections. Every predefined collection is designed to match a particular development style and determines window layouts, editor behavior, IntelliSense code snippets, and dialog box options. The procedures in this lab describe the actions necessary to accomplish a given task in Visual Studio when using the <strong>General Development Settings</strong> collection. If you choose a different settings collection for your development environment, there may be differences in these procedures that you need to take into account.</p>
+</blockquote>
+<p><a name="Exercise1"></a></p>
+
+<h3 id="Exercise_1_Creating_a_Windows_Azure_Storage_Account">Exercise 1: Creating a Windows Azure Storage Account</h3>
+
+<p>This exercise describes how to create a storage account in the Windows Azure Management Portal. To store files and data in the storage services in Windows Azure, you must create a storage account in the geographic region where you want to store the data.</p>
+<blockquote>
+<p><strong>Note:</strong> A storage account can contain up to 100 TB of blob, table, and queue data. You can create up to five storage accounts for each Windows Azure subscription.</p>
+</blockquote>
+<p><a name="Ex1Task1"></a></p>
+
+<h4 id="Task_1_-_Creating_a_Storage_Account_from_Management_Portal">Task 1 - Creating a Storage Account from Management Portal</h4>
+
+<p>In this task you will learn how to create a new Storage Account using the Management Portal.</p>
+
+<ol>
+<li><p>Navigate to <a href="http://manage.windowsazure.com">http://manage.windowsazure.com</a> using a Web browser and sign in using the Microsoft Account associated with your Windows Azure account.</p>
+
+<p><img src="Images/logging-azure-portal.png?raw=true" alt="logging-azure-portal">
+</p>
+
+<p><em>Logging to the Management Portal</em></p></li>
+<li><p>In the menu located at the bottom, select <strong>New | Data Services | Storage | Quick Create</strong> to start creating a new Storage Account. Enter a unique name for the account and select a <strong>Region</strong> from the list. Click <strong>OK</strong> to continue.
+<img src="Images/create-storage-account-menu.png?raw=true" alt="create-storage-account-menu">
+</p>
+
+<p><em>Creating a new storage account</em></p></li>
+<li><p>In the <strong>Storage</strong> section, you will see the Storage Account you created with a <em>Creating</em> status. Wait until it changes to <em>Online</em> in order to continue with the following step.</p>
+
+<p><img src="Images/storage-account-created.png?raw=true" alt="storage-account-created">
+</p>
+
+<p><em>Storage Account created</em></p></li>
+<li><p>Click on the storage account name you created. You will enter the <strong>Dashboard</strong> page which provides you with information about the status of the account and the service endpoints that can be used within your applications.</p>
+
+<p><img src="Images/storage-account-dashboard.png?raw=true" alt="storage-account-dashboard">
+</p>
+
+<p><em>Displaying the Storage Account Dashboard</em></p>
+
+<p>In the next exercise, you will configure the storage account to enable Geo-Replication, Monitoring and Logging and manage the Access Keys.</p></li>
+</ol>
+
+<p><a name="Exercise2"></a></p>
+
+<h3 id="Exercise_2_Managing_a_Windows_Azure_Storage_Account">Exercise 2: Managing a Windows Azure Storage Account</h3>
+
+<p>In this exercise, you will configure the common settings for your storage account. You will manage your <strong>Access Keys</strong>, enabling <strong>Geo-Replication</strong> and configuring <strong>Monitoring and Logging</strong>.</p>
+
+<p><a name="Ex2Task1"></a></p>
+
+<h4 id="Task_1_-_Enabling_Geo-Replication">Task 1 - Enabling Geo-Replication</h4>
+
+<p>Geo-replication replicates the stored content to a secondary location to enable failover to that location in case of a major disaster in the primary location. The secondary location is in the same region, but is hundreds of miles from the primary location. This is the highest level of storage durability, known as geo redundant storage (GRS). Geo-replication is turned on by default.</p>
+
+<ol>
+<li><p>In the Storage Account page, click the <strong>Configure</strong> tab in the top menu.</p>
+
+<p><img src="Images/configure-storage-menu.png?raw=true" alt="configure-storage-menu">
+</p>
+
+<p><em>Configuring Storage Account</em></p></li>
+<li><p>You can choose to enable or disable it in the <strong>Geo-Replication</strong> section.</p>
+
+<p><img src="Images/configuring-storage-georeplication.png?raw=true" alt="configuring-storage-georeplication">
+</p>
+
+<p><em>Enabling Geo-Replication</em></p>
+<blockquote>
+<p><strong>Note:</strong> If you turn off geo-replication, you have locally redundant storage (LRS). For locally redundant storage, account data is replicated three times within the same data center. LRS is offered at discounted rates. Be aware that if you turn off geo-replication, and you later change your mind, you will incur a one-time data cost to replicate your existing data to the secondary location.</p>
+</blockquote></li>
+</ol>
+
+<p><a name="Ex2Task2"></a></p>
+
+<h4 id="Task_2_-_Configuring_Monitoring">Task 2 - Configuring Monitoring</h4>
+
+<p>From the <strong>Monitoring</strong> section, you can monitor your storage accounts in the Windows Azure Management Portal. For each storage service associated with the storage account (Blob, Queue, and Table), you can choose the level of monitoring - minimal or verbose - and specify the appropriate data retention policy.</p>
+
+<ol>
+<li><p>In the <strong>Configure</strong> page, go to the <strong>Monitoring</strong> section.</p>
+
+<p><img src="Images/configuring-storage-monitoring.png?raw=true" alt="configuring-storage-monitoring">
+</p>
+
+<p><em>Configuring Monitoring Options</em></p></li>
+<li><p>To set the monitoring level, select one of the following:</p>
+
+<p><strong>Minimal</strong> - Collects metrics such as ingress/egress, availability, latency, and success percentages, which are aggregated for the Blob, Table, and Queue services.</p>
+
+<p><strong>Verbose</strong> - In addition to the minimal metrics, this settings collects the same set of metrics for each storage operation in the Windows Azure Storage Service API. Verbose metrics enable closer analysis of issues that occur during application operations.</p>
+
+<p><strong>Off</strong> - Turns off monitoring. Existing monitoring data is persisted through the end of the retention period.</p>
+<blockquote>
+<p><strong>Note:</strong> There are costs considerations when you select monitoring. For more information, see <a href="http://msdn.microsoft.com/en-us/library/windowsazure/hh360997.aspx">Storage Analytics and Billing</a>.</p>
+</blockquote></li>
+<li><p>To set the data retention policy, in <strong>Retention</strong> (in days), type the number of days that data should be retained from 1-365 days. If there is no retention policy (by entering zero value), it is up to you to delete the monitoring data. </p>
+<blockquote>
+<p><strong>Note:</strong> It is recommended to set a retention policy based on how long you want to retain storage analytics data for your account so that old and unused analytics data can be deleted by the system at no cost.</p>
+</blockquote></li>
+<li><p>Once Monitoring is enabled, you can customize the <strong>Dashboard</strong> to choose up to six metrics to plot on the metrics chart. There are nine available metrics for each service. To do so, go to the <strong>Dashboard</strong> page.</p>
+
+<p><img src="Images/storage-dashboard-menu.png?raw=true" alt="storage-dashboard-menu">
+</p></li>
+<li><p>In the <strong>Dashboard</strong> page, you will see the default metrics displayed on the chart. To add a different metric, click on the <strong>More</strong> button to display the available metrics. Select one from the list.</p>
+
+<p><img src="Images/adding-metrics-dashboard.png?raw=true" alt="adding-metrics-dashboard">
+</p>
+
+<p><em>Adding Metrics to the Dashboard</em></p>
+<blockquote>
+<p><strong>Note:</strong> You can hide metrics that are plotted on the chart by clearing the check box next to the metric header.</p>
+</blockquote></li>
+<li><p>By default, the chart shows trends, displaying only the current value of each metric (the <strong>Relative</strong> option at the top of the chart). To display a Y axis to see absolute values, select <strong>Absolute</strong>.</p>
+
+<p><img src="Images/dashboard-absolute-values.png?raw=true" alt="dashboard-absolute-values">
+</p>
+
+<p><em>Changing Chart values to Absolute</em></p></li>
+<li><p>To change the time range displayed on the chart, select <strong>6 hours</strong> or <strong>24 hours</strong> at the top of the chart.</p>
+
+<p><img src="Images/dashboard-time-ranges.png?raw=true" alt="dashboard-time-ranges">
+</p>
+
+<p><em>Changing Chart Time Ranges</em></p></li>
+<li><p>Click <strong>Monitor</strong> in the top menu. On the <strong>Monitor</strong> page, you can view the full set of metrics for your storage account.</p>
+
+<p><img src="Images/storage-monitor-menu.png?raw=true" alt="storage-monitor-menu">
+</p></li>
+<li><p>By default, the metrics table displays a subset of the metrics that are available for monitoring. The illustration shows the default Monitor display for a storage account with verbose monitoring configured for all three services. Click the <strong>Add Metrics</strong> button in the bottom menu.</p>
+
+<p><img src="Images/add-metrics-menu.png?raw=true" alt="add-metrics-menu">
+</p>
+
+<p><em>Adding Metrics</em></p></li>
+<li><p>In the dialog box, you can choose from a list of different types of metrics for each service. You can select the metrics you want to display in the <strong>Monitor</strong> table.Click <strong>OK</strong> to continue.</p>
+
+<p><img src="Images/select-metrics-to-monitor-dialog.png?raw=true" alt="Select Metrics to Monitor dialog" title="Select Metrics to Monitor dialog">
+</p>
+
+<p><em>Select Metrics to Monitor dialog</em></p></li>
+<li><p>The metrics you selected will be displayed in the <strong>Monitor</strong> table.</p>
+
+<p><img src="Images/metrics-table.png?raw=true" alt="metrics-table">
+</p></li>
+<li><p>You can delete a metric by selecting it and clicking the <strong>Delete Metric</strong> button in the bottom menu.</p>
+
+<p><img src="Images/delete-metric-menu.png?raw=true" alt="delete-metric-menu">
+</p>
+
+<p><em>Deleting a Metric</em></p></li>
+</ol>
+
+<p><a name="Ex2Task3"></a></p>
+
+<h4 id="Task_3_-_Configuring_Logging">Task 3 - Configuring Logging</h4>
+
+<p>You can save diagnostic logs for Read Requests, Write Requests, and/or Delete Requests and can set the data retention policy for each of the services. In this task you will configure logging for your storage account.</p>
+
+<ol>
+<li><p>In the <strong>Configure</strong> page, go to the <strong>Logging</strong> section.</p></li>
+<li><p>For each service (Blob, Table or Queue), you can configure the types of request to log: Read Requests, Write Requests, and Delete Requests. You can also configure the number of days to retain the logged data. Enter zero if you do not want to set a retention policy. If you do not set a retention policy, it is up to you to delete the logs.</p>
+
+<p><img src="Images/configuring-storage-logging.png?raw=true" alt="configuring-storage-logging">
+</p>
+
+<p><em>Configuring Logging Options</em></p>
+<blockquote>
+<p><strong>Note:</strong> The diagnostics logs are saved in a blob container named <strong>$logs</strong> in your storage account. For information about accessing the $logs container, see <a href="http://msdn.microsoft.com/en-us/library/windowsazure/hh343262.aspx">About Storage Analytics Logging</a>.</p>
+</blockquote></li>
+</ol>
+
+<p><a name="Ex2Task4"></a></p>
+
+<h4 id="Task_4_-_Managing_Account_Keys">Task 4 - Managing Account Keys</h4>
+
+<p>When you create a storage account, Windows Azure generates two 512-bit storage access keys which are used for authentication when the storage account is accessed. By providing two storage access keys, Windows Azure enables you to regenerate the keys with no interruption to your storage service.</p>
+
+<ol>
+<li><p>In the Storage Account Dashboard, select the option <strong>Manage Access Keys</strong> in the bottom menu.</p>
+
+<p><img src="Images/manage-keys-menu.png?raw=true" alt="manage-keys-menu">
+</p>
+
+<p><em>Managing Access Keys</em></p></li>
+<li><p>You can use <strong>Manage Keys</strong> to copy a storage access key to use in a connection string. The connection string requires the storage account name and a key to use in authentication. Take note of the Primary access key and the storage account name as they will be used in the following exercise.</p>
+
+<p><img src="Images/managing-access-keys.png?raw=true" alt="managing-access-keys">
+</p>
+
+<p><em>Copying Access Keys</em></p></li>
+<li><p>By clicking the <strong>Regenerate</strong> button, a new Access Key is created. You should change the access keys to your storage account periodically to help keep your storage connections more secure. Two access keys are assigned to enable you to maintain connections to the storage account using one access key while you regenerate the other access key. </p>
+<blockquote>
+<p><strong>Note:</strong> Regenerating your access keys affects virtual machines, media services, and any applications that are dependent on the storage account.</p>
+</blockquote>
+<p>In the next exercise, you will consume Windows Azure Storage services from an MVC application.</p></li>
+</ol>
+
+<p><a name="Exercise3"></a></p>
+
+<h3 id="Exercise_3_Understanding_the_Windows_Azure_Storage_Abstractions">Exercise 3: Understanding the Windows Azure Storage Abstractions</h3>
+
+<p>This sample application is comprised of five Views, one for each CRUD operation (Create, Read, Update, Delete) and one to list all the entities from the Table Storage. In this exercise, you will update the MVC application actions to perform operations against each storage service (Table, Blob and Queue) using <strong>Windows Azure SDK v2.0</strong>.</p>
+
+<p><a name="Ex3Task1"></a></p>
+
+<h4 id="Task_1_-_Configuring_Storage_Account_in_the_Cloud_Project">Task 1 - Configuring Storage Account in the Cloud Project</h4>
+
+<p>In this task you will configure the <em>storage connection string</em> of the application with the storage account you previously created using the <em>Access Key</em> from the previous exercise.</p>
+
+<ol>
+<li><p>Open <strong>Visual Studio Express 2012 for Web</strong> as Administrator.</p></li>
+<li><p>Browse to the <strong>Source\Ex3-UnderstandingStorageAbstractions\Begin</strong> folder of this lab and open the <strong>Begin.sln</strong> solution. Make sure to set the <strong>PhotoUploader</strong> cloud project as the default project.</p></li>
+<li><p>Go to the <strong>PhotoUploader_WebRole</strong> located in the <strong>Roles</strong> folder of the <strong>PhotoUploader</strong> solution. Right-click it and select <strong>Properties</strong>.</p>
+
+<p><img src="Images/webrol-properties.png?raw=true" alt="Web Role Properties" title="WebRol Properties">
+</p>
+
+<p><em>Web Role Properties</em></p></li>
+<li><p>Go to the <strong>Settings</strong> tab and locate the <em>StorageConnectionString</em> setting. Click the ellipsis next to the <em>UseDevelopmentStorage=true</em> value.</p>
+
+<p><img src="Images/settings-tab.png?raw=true" alt="Settings Tab" title="Settings Tab">
+</p>
+
+<p><em>Settings Tab</em></p></li>
+<li><p>Select <strong>Manually Entered Credentials</strong> and set the <strong>Account name</strong> and <strong>Account key</strong> values from the previous exercise. </p>
+
+<p><img src="Images/create-storage-connection-string-dialog.png?raw=true" alt="Create Storage Connection String Dialog Box" title="Create Storage Connection String Dialog Box">
+</p>
+
+<p><em>Create Storage Connection String Dialog Box</em></p></li>
+<li><p>Click <strong>OK</strong> to update the connection string.</p></li>
+<li><p>Repeat the previous steps to configure the <em>StorageConnectionString</em> for the <strong>QueueProcessor_WorkerRole</strong>.</p></li>
+</ol>
+
+<p><a name="Ex3Task2"></a></p>
+
+<h4 id="Task_2_-_Working_with_Table_Storage">Task 2 - Working with Table Storage</h4>
+
+<p>In this task you will update the MVC application actions to perform operations against the Table Storage. You are going to use Table Storage to save information from the photo uploaded such as Title and Description.</p>
+
+<ol>
+<li><p>Open <strong>PhotoEntity.cs</strong> in the <strong>Models</strong> folder and add the following directives.</p>
+
+<span class="codelanguage">C#</span><pre><code class="C#"><span style="color:#0000FF">using</span> Microsoft.WindowsAzure.Storage.Table;
+</code></pre></li>
+<li><p>Update the class to inherit from <strong>TableEntity</strong>. The TableEntity has a <strong>PartitionKey</strong> and <strong>RowKey</strong> property that need to be set when adding a new row to the Table Storage. To do so, add the following Constructor and inherit the class from <strong>TableEntity</strong>.</p>
+
+<p>(Code Snippet - <em>GettingStartedWindowsAzureStorage - Ex3-InheritingTableEntity</em>)</p>
+
+<!-- mark:1-7 -->
+
+<span class="codelanguage">C#</span><pre><code class="C#"><strong class="markLine"><span style="color:#0000FF">public</span> <span style="color:#0000FF">class</span> PhotoEntity : TableEntity</strong>
+<strong class="markLine">{</strong>
+<strong class="markLine">    <span style="color:#0000FF">public</span> PhotoEntity()</strong>
+<strong class="markLine">    {</strong>
+<strong class="markLine">        PartitionKey = <span style="color:#8B0000">&quot;Photo&quot;</span>;</strong>
+<strong class="markLine">        RowKey = Guid.NewGuid().ToString();</strong>
+<strong class="markLine">    }</strong>
+
+    ...
+}
+</code></pre></li>
+<li><p>Now you will add a new class to implement a <strong>TableServiceContext</strong> to interact with Table Storage. Right-click the <strong>Models</strong> folder and select <strong>Add</strong> | <strong>Class</strong>.</p>
+
+<p><img src="Images/add-new-class.png?raw=true" alt="Add new class" title="Add new class">
+</p>
+
+<p><em>Adding a new class</em></p></li>
+<li><p>In the <strong>Add New Item</strong> window, set the name of the class to <strong>PhotoDataServiceContext.cs</strong> and click <strong>Add</strong>. </p>
+
+<p><img src="Images/photodataservicecontext-class.png?raw=true" alt="PhotoDataServiceContext class" title="PhotoDataServiceContext class">
+</p>
+
+<p><em>PhotoDataServiceContext class</em></p></li>
+<li><p>Add the following directives to the <strong>PhotoDataServiceContext</strong> class.</p>
+
+<span class="codelanguage">C#</span><pre><code class="C#"><span style="color:#0000FF">using</span> Microsoft.WindowsAzure.Storage.Table;
+<span style="color:#0000FF">using</span> Microsoft.WindowsAzure.Storage.Table.DataServices;
+</code></pre></li>
+<li><p>Replace the class content with the following code: </p>
+
+<p>(Code Snippet - <em>GettingStartedWindowsAzureStorage - Ex3-PhotoDataServiceContext</em>)</p>
+
+<span class="codelanguage">C#</span><pre><code class="C#"><span style="color:#0000FF">public</span> <span style="color:#0000FF">class</span> PhotoDataServiceContext : TableServiceContext
+{
+    <span style="color:#0000FF">public</span> PhotoDataServiceContext(CloudTableClient client): <span style="color:#0000FF">base</span>(client)
+    {
+
+    }
+
+    <span style="color:#0000FF">public</span> IEnumerable&lt;PhotoEntity&gt; GetPhotos()
+    {
+        <span style="color:#0000FF">return</span> <span style="color:#0000FF">this</span>.CreateQuery&lt;PhotoEntity&gt;(<span style="color:#8B0000">&quot;Photos&quot;</span>);         
+    }
+}
+</code></pre>
+<blockquote>
+<p><strong>Note</strong>: You need to make the class inherit from TableServiceContext to interact with Table Storage.</p>
+</blockquote></li>
+<li><p>Now, you will add an operation to retrieve a single entity from the table. Add the following code to the <strong>PhotoDataServiceContext</strong> class:</p>
+
+<p>(Code Snippet - <em>GettingStartedWindowsAzureStorage - Ex3-DataContextGetById</em>)</p>
+
+<span class="codelanguage">C#</span><pre><code class="C#"><span style="color:#0000FF">public</span> PhotoEntity GetById(<span style="color:#0000FF">string</span> partitioKey, <span style="color:#0000FF">string</span> rowKey)
+{
+    CloudTable table = <span style="color:#0000FF">this</span>.ServiceClient.GetTableReference(<span style="color:#8B0000">&quot;Photos&quot;</span>);
+    TableOperation retrieveOperation = TableOperation.Retrieve&lt;PhotoEntity&gt;(partitioKey, rowKey);
+
+    TableResult retrievedResult = table.Execute(retrieveOperation);
+
+    <span style="color:#0000FF">if</span> (retrievedResult.Result != <span style="color:#0000FF">null</span>)
+         <span style="color:#0000FF">return</span> (PhotoEntity)retrievedResult.Result;
+    <span style="color:#0000FF">else</span>
+         <span style="color:#0000FF">return</span> <span style="color:#0000FF">null</span>;
+}
+</code></pre>
+<blockquote>
+<p><strong>Note</strong>: The previous code uses a <strong>TableOperation</strong> to retrieve the photo with the specific <strong>RowKey</strong>. This method returns just one entity, rather than a collection, and the returned value in <strong>TableResult.Result</strong> is a <strong>PhotoEntity</strong>.</p>
+</blockquote></li>
+<li><p>In order to add a new entity, you can use the <strong>Insert</strong> table operation. Add the following code to implement it:</p>
+
+<p>(Code Snippet - <em>GettingStartedWindowsAzureStorage - Ex3-DataContextAddPhoto</em>)</p>
+
+<span class="codelanguage">C#</span><pre><code class="C#"><span style="color:#0000FF">public</span> <span style="color:#0000FF">void</span> AddPhoto(PhotoEntity photo)
+{
+    TableOperation operation = TableOperation.Insert(photo);
+    CloudTable table = <span style="color:#0000FF">this</span>.ServiceClient.GetTableReference(<span style="color:#8B0000">&quot;Photos&quot;</span>);
+    table.Execute(operation);
+}
+</code></pre>
+<blockquote>
+<p><strong>Note</strong>: To prepare the insert operation, a <strong>TableOperation</strong> is created to insert the photo entity into the table. The operation is then executed by calling <strong>CloudTable.Execute.</strong></p>
+</blockquote></li>
+<li><p><strong>Update</strong> operations are similar to insert, but first we need to retrieve the entity and then use a <strong>Replace</strong> table operation. Add the following code:</p>
+
+<p>(Code Snippet - <em>GettingStartedWindowsAzureStorage - Ex3-DataContextUpdatePhoto</em>)</p>
+
+<span class="codelanguage">C#</span><pre><code class="C#"><span style="color:#0000FF">public</span> <span style="color:#0000FF">void</span> UpdatePhoto(PhotoEntity photo)
+{
+    CloudTable table = <span style="color:#0000FF">this</span>.ServiceClient.GetTableReference(<span style="color:#8B0000">&quot;Photos&quot;</span>);
+    TableOperation retrieveOperation = TableOperation.Retrieve&lt;PhotoEntity&gt;(photo.PartitionKey, photo.RowKey);
+
+    TableResult retrievedResult = table.Execute(retrieveOperation);
+    PhotoEntity updateEntity = (PhotoEntity)retrievedResult.Result;
+
+    <span style="color:#0000FF">if</span> (updateEntity != <span style="color:#0000FF">null</span>)
+    {
+         updateEntity.Description = photo.Description;
+         updateEntity.Title = photo.Title;
+
+         TableOperation replaceOperation = TableOperation.Replace(updateEntity);
+         table.Execute(replaceOperation);
+    }
+}
+</code></pre></li>
+<li><p>To delete an entity, we need to first retrieve it from the table and then execute a <strong>Delete</strong> table operation. Add the following code to implement it:</p>
+
+<p>(Code Snippet - <em>GettingStartedWindowsAzureStorage - Ex3-DataContextDeletePhoto</em>)</p>
+
+<span class="codelanguage">C#</span><pre><code class="C#"><span style="color:#0000FF">public</span> <span style="color:#0000FF">void</span> DeletePhoto(PhotoEntity photo)
+{
+    CloudTable table = <span style="color:#0000FF">this</span>.ServiceClient.GetTableReference(<span style="color:#8B0000">&quot;Photos&quot;</span>);
+    TableOperation retrieveOperation = TableOperation.Retrieve&lt;PhotoEntity&gt;(photo.PartitionKey, photo.RowKey);
+    TableResult retrievedResult = table.Execute(retrieveOperation);
+    PhotoEntity deleteEntity = (PhotoEntity)retrievedResult.Result;
+
+    <span style="color:#0000FF">if</span> (deleteEntity != <span style="color:#0000FF">null</span>)
+    {
+         TableOperation deleteOperation = TableOperation.Delete(deleteEntity);
+         table.Execute(deleteOperation);
+    }
+}
+</code></pre></li>
+<li><p>Open <strong>HomeController.cs</strong> in the <strong>Controllers</strong> folder. We'll update the controller's actions to execute the table operations from the DataContext you created in the previous steps. Add the following using directives.</p>
+
+<span class="codelanguage">C#</span><pre><code class="C#"><span style="color:#0000FF">using</span> Microsoft.WindowsAzure;
+<span style="color:#0000FF">using</span> Microsoft.WindowsAzure.Storage;
+<span style="color:#0000FF">using</span> Microsoft.WindowsAzure.Storage.Table;
+</code></pre></li>
+<li><p>Add a private field to create a <em>StorageAccount</em> object. This object will be used to perform operations for each storage service.</p>
+
+<p>(Code Snippet - <em>GettingStartedWindowsAzureStorage - Ex3-StorageAccountVariable</em>)</p>
+
+<!-- mark:3 -->
+
+<span class="codelanguage">C#</span><pre><code class="C#"><span style="color:#0000FF">public</span> <span style="color:#0000FF">class</span> HomeController : Controller
+{
+<strong class="markLine">    <span style="color:#0000FF">private</span> CloudStorageAccount StorageAccount = CloudStorageAccount.Parse(CloudConfigurationManager.GetSetting(<span style="color:#8B0000">&quot;StorageConnectionString&quot;</span>));</strong>
+
+    ...
+}
+</code></pre></li>
+<li><p>In order to display the entities in the View, you will convert them to a ViewModel class. You are going to add two helper methods to convert from <strong>ViewModel</strong> to a <strong>Model</strong> and from a <strong>Model</strong> to a <strong>ViewModel</strong>. Add the following methods at the end of the class declaration.</p>
+
+<p>(Code Snippet - <em>GettingStartedWindowsAzureStorage - Ex3-ViewModelHelpers</em>)</p>
+
+<span class="codelanguage">C#</span><pre><code class="C#"><span style="color:#0000FF">private</span> PhotoViewModel ToViewModel(PhotoEntity photo)
+{
+    <span style="color:#0000FF">return</span> <span style="color:#0000FF">new</span> PhotoViewModel
+    {
+         PartitionKey = photo.PartitionKey,
+         RowKey = photo.RowKey,
+         Title = photo.Title,
+         Description = photo.Description                
+    };
+}
+
+<span style="color:#0000FF">private</span> PhotoEntity FromViewModel(PhotoViewModel photoViewModel)
+{
+    <span style="color:#0000FF">var</span> photo = <span style="color:#0000FF">new</span> PhotoEntity
+    {
+        Title = photoViewModel.Title,
+        Description = photoViewModel.Description
+    };
+
+    photo.PartitionKey = photoViewModel.PartitionKey ?? photo.PartitionKey;
+    photo.RowKey = photoViewModel.RowKey ?? photo.RowKey;
+    <span style="color:#0000FF">return</span> photo;
+}
+</code></pre></li>
+<li><p>The <strong>Home</strong> page will display a list of entities from Table Storage. For it to do this, replace the <strong>Index</strong> action to retrieve the entire list of entities from the Table Storage using the <strong>PhotoDataServiceContext</strong> with the following code.</p>
+
+<p>(Code Snippet - <em>GettingStartedWindowsAzureStorage - Ex3-TableStorageIndex</em>)</p>
+
+<span class="codelanguage">C#</span><pre><code class="C#"><span style="color:#0000FF">public</span> ActionResult Index()
+{
+    CloudTableClient cloudTableClient = <span style="color:#0000FF">this</span>.StorageAccount.CreateCloudTableClient();
+    <span style="color:#0000FF">var</span> photoContext = <span style="color:#0000FF">new</span> PhotoDataServiceContext(cloudTableClient);
+    <span style="color:#0000FF">return</span> <span style="color:#0000FF">this</span>.View(photoContext.GetPhotos().Select(x =&gt; <span style="color:#0000FF">this</span>.ToViewModel(x)).ToList());
+}
+</code></pre></li>
+<li><p>The <strong>Details</strong> view will show specific information of a particular photo. Replace the <strong>Details</strong> action with the following code to display the information of a single entity using the <strong>PhotoDataServiceContext</strong>.</p>
+
+<p>(Code Snippet - <em>GettingStartedWindowsAzureStorage - Ex3-TableStorageDetails</em>)</p>
+
+<span class="codelanguage">C#</span><pre><code class="C#"><span style="color:#0000FF">public</span> ActionResult Details(<span style="color:#0000FF">string</span> partitionKey, <span style="color:#0000FF">string</span> rowKey)
+{
+    CloudTableClient cloudTableClient = <span style="color:#0000FF">this</span>.StorageAccount.CreateCloudTableClient();
+    <span style="color:#0000FF">var</span> photoContext = <span style="color:#0000FF">new</span> PhotoDataServiceContext(cloudTableClient);
+    PhotoEntity photo = photoContext.GetById(partitionKey, rowKey);
+
+<span style="color:#0000FF">if</span> (photo == <span style="color:#0000FF">null</span>)
+{
+     <span style="color:#0000FF">return</span> HttpNotFound();
+}
+
+<span style="color:#0000FF">var</span> viewModel = <span style="color:#0000FF">this</span>.ToViewModel(photo);
+<span style="color:#0000FF">return</span> <span style="color:#0000FF">this</span>.View(viewModel);
+}
+</code></pre></li>
+<li><p>Replace the <strong>Create</strong> <em>POST</em> action with the following code to insert a new entity in the Table Storage.</p>
+
+<p>(Code Snippet - <em>GettingStartedWindowsAzureStorage - Ex3-TableStorageCreate</em>)</p>
+
+<span class="codelanguage">C#</span><pre><code class="C#">[HttpPost]
+<span style="color:#0000FF">public</span> ActionResult Create(PhotoViewModel photoViewModel, HttpPostedFileBase file, FormCollection collection)
+{
+    <span style="color:#0000FF">if</span> (<span style="color:#0000FF">this</span>.ModelState.IsValid)
+    {
+        <span style="color:#0000FF">var</span> photo = <span style="color:#0000FF">this</span>.FromViewModel(photoViewModel);
+        photo.PartitionKey = <span style="color:#0000FF">this</span>.User.Identity.IsAuthenticated ? <span style="color:#0000FF">this</span>.User.Identity.Name : <span style="color:#8B0000">&quot;Public&quot;</span>;
+        <span style="color:#008000">// Save information to Table Storage</span>
+        CloudTableClient cloudTableClient = <span style="color:#0000FF">this</span>.StorageAccount.CreateCloudTableClient();
+        <span style="color:#0000FF">var</span> photoContext = <span style="color:#0000FF">new</span> PhotoDataServiceContext(cloudTableClient);
+        photoContext.AddPhoto(photo);
+
+        <span style="color:#0000FF">return</span> <span style="color:#0000FF">this</span>.RedirectToAction(<span style="color:#8B0000">&quot;Index&quot;</span>);
+    }
+
+    <span style="color:#0000FF">return</span> <span style="color:#0000FF">this</span>.View();
+}
+</code></pre></li>
+<li><p>Replace the <strong>Edit</strong> <em>GET</em> Action with the following code to retrieve existing entity information from Table Storage.</p>
+
+<p>(Code Snippet - <em>GettingStartedWindowsAzureStorage - Ex3-TableStorageEdit</em>)</p>
+
+<span class="codelanguage">C#</span><pre><code class="C#"><span style="color:#0000FF">public</span> ActionResult Edit(<span style="color:#0000FF">string</span> partitionKey, <span style="color:#0000FF">string</span> rowKey)
+{
+    CloudTableClient cloudTableClient = <span style="color:#0000FF">this</span>.StorageAccount.CreateCloudTableClient();
+    <span style="color:#0000FF">var</span> photoContext = <span style="color:#0000FF">new</span> PhotoDataServiceContext(cloudTableClient);
+    PhotoEntity photo = photoContext.GetById(partitionKey, rowKey);
+
+    <span style="color:#0000FF">if</span> (photo == <span style="color:#0000FF">null</span>)
+    {
+        <span style="color:#0000FF">return</span> <span style="color:#0000FF">this</span>.HttpNotFound();
+    }
+
+    <span style="color:#0000FF">var</span> viewModel = <span style="color:#0000FF">this</span>.ToViewModel(photo);
+
+    <span style="color:#0000FF">return</span> <span style="color:#0000FF">this</span>.View(viewModel);
+}
+</code></pre></li>
+<li><p>Replace the <strong>Edit</strong> <em>POST</em> action with the following code to update an existing entity in the table storage.</p>
+
+<p>(Code Snippet - <em>GettingStartedWindowsAzureStorage - Ex3-TableStoragePostEdit</em>)</p>
+
+<span class="codelanguage">C#</span><pre><code class="C#">[HttpPost]
+[ValidateAntiForgeryToken]
+<span style="color:#0000FF">public</span> ActionResult Edit(PhotoViewModel photoViewModel, FormCollection collection)
+{
+    <span style="color:#0000FF">if</span> (ModelState.IsValid)
+    {
+        <span style="color:#0000FF">var</span> photo = <span style="color:#0000FF">this</span>.FromViewModel(photoViewModel);
+
+        <span style="color:#008000">//Update information in Table Storage</span>
+        CloudTableClient cloudTableClient = <span style="color:#0000FF">this</span>.StorageAccount.CreateCloudTableClient();
+        <span style="color:#0000FF">var</span> photoContext = <span style="color:#0000FF">new</span> PhotoDataServiceContext(cloudTableClient);
+        photoContext.UpdatePhoto(photo);
+
+        <span style="color:#0000FF">return</span> <span style="color:#0000FF">this</span>.RedirectToAction(<span style="color:#8B0000">&quot;Index&quot;</span>);
+    }
+
+    <span style="color:#0000FF">return</span> <span style="color:#0000FF">this</span>.View();
+}
+</code></pre></li>
+<li><p>Replace the <strong>Delete</strong> <em>GET</em> Action with the following code to retrieve existing entity data from Table Storage.</p>
+
+<p>(Code Snippet - <em>GettingStartedWindowsAzureStorage - Ex3-TableStorageDelete</em>)</p>
+
+<span class="codelanguage">C#</span><pre><code class="C#"><span style="color:#0000FF">public</span> ActionResult Delete(<span style="color:#0000FF">string</span> partitionKey, <span style="color:#0000FF">string</span> rowKey)
+{
+    CloudTableClient cloudTableClient = <span style="color:#0000FF">this</span>.StorageAccount.CreateCloudTableClient();
+    <span style="color:#0000FF">var</span> photoContext = <span style="color:#0000FF">new</span> PhotoDataServiceContext(cloudTableClient);
+    PhotoEntity photo = photoContext.GetById(partitionKey, rowKey);
+
+    <span style="color:#0000FF">if</span> (photo == <span style="color:#0000FF">null</span>)
+    {
+        <span style="color:#0000FF">return</span> <span style="color:#0000FF">this</span>.HttpNotFound();
+    }
+
+    <span style="color:#0000FF">var</span> viewModel = <span style="color:#0000FF">this</span>.ToViewModel(photo);
+
+    <span style="color:#0000FF">return</span> <span style="color:#0000FF">this</span>.View(viewModel);
+}
+</code></pre></li>
+<li><p>Replace the <strong>DeleteConfirmed</strong> action with the following code to delete an existing entity from the table.</p>
+
+<p>(Code Snippet - <em>GettingStartedWindowsAzureStorage - Ex3-TableStoragePostDelete</em>)</p>
+
+<span class="codelanguage">C#</span><pre><code class="C#">[HttpPost, ActionName(<span style="color:#8B0000">&quot;Delete&quot;</span>)]
+[ValidateAntiForgeryToken]
+<span style="color:#0000FF">public</span> ActionResult DeleteConfirmed(<span style="color:#0000FF">string</span> partitionKey, <span style="color:#0000FF">string</span> rowKey)
+{
+    CloudTableClient cloudTableClient = <span style="color:#0000FF">this</span>.StorageAccount.CreateCloudTableClient();
+    <span style="color:#0000FF">var</span> photoContext = <span style="color:#0000FF">new</span> PhotoDataServiceContext(cloudTableClient);
+    PhotoEntity photo = photoContext.GetById(partitionKey, rowKey);
+    photoContext.DeletePhoto(photo);
+
+    <span style="color:#0000FF">return</span> <span style="color:#0000FF">this</span>.RedirectToAction(<span style="color:#8B0000">&quot;Index&quot;</span>);
+}
+</code></pre></li>
+<li><p>In order to be able to work with Table Storage, we first need to have the table created. Data tables should only be created once. Typically, you would do this during a provisioning step and rarely in application code. The <strong>Application_Start</strong> method in the <strong>Global.asax</strong> class is a recommended for this initialization logic. To complete the step, open <strong>Global.asax.cs</strong> and add the following using directives.</p>
+
+<span class="codelanguage">C#</span><pre><code class="C#"><span style="color:#0000FF">using</span> Microsoft.WindowsAzure;
+<span style="color:#0000FF">using</span> Microsoft.WindowsAzure.Storage;
+<span style="color:#0000FF">using</span> Microsoft.WindowsAzure.Storage.Table;
+</code></pre></li>
+<li><p>Add the following code at the end of the <strong>Application_Start</strong> method.</p>
+
+<p>(Code Snippet - <em>GettingStartedWindowsAzureStorage - Ex3-TableStorageAppStart</em>)</p>
+
+<!-- mark:10-13 -->
+
+<span class="codelanguage">C#</span><pre><code class="C#"><span style="color:#0000FF">protected</span> <span style="color:#0000FF">void</span> Application_Start()
+{
+    AreaRegistration.RegisterAllAreas();
+
+    WebApiConfig.Register(GlobalConfiguration.Configuration);
+    FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);
+    RouteConfig.RegisterRoutes(RouteTable.Routes);
+    BundleConfig.RegisterBundles(BundleTable.Bundles);
+
+<strong class="markLine">    CloudStorageAccount storageAccount = CloudStorageAccount.Parse(CloudConfigurationManager.GetSetting(<span style="color:#8B0000">&quot;StorageConnectionString&quot;</span>));</strong>
+<strong class="markLine">    CloudTableClient cloudTableClient = storageAccount.CreateCloudTableClient();</strong>
+<strong class="markLine">    CloudTable table = cloudTableClient.GetTableReference(<span style="color:#8B0000">&quot;Photos&quot;</span>);</strong>
+<strong class="markLine">    table.CreateIfNotExists();</strong>
+}
+</code></pre></li>
+<li><p>Press <strong>F5</strong> and run the application.</p>
+
+<p><img src="Images/index-home-page.png?raw=true" alt="Index Home Page" title="Index Home Page">
+</p>
+
+<p><em>Index Home Page</em></p></li>
+<li><p>Create a new entity. To do so, click the <strong>Create</strong> link.</p></li>
+<li><p>Complete the <strong>Title</strong> and <strong>Description</strong> fields and <strong>Submit</strong> the form</p>
+
+<p><img src="Images/create-image-form.png?raw=true" alt="Create Image Form" title="Create Image Form">
+</p>
+
+<p><em>Create Image Form</em></p>
+<blockquote>
+<p><strong>Note</strong>: You can ignore the Upload file input in this exercise.</p>
+</blockquote></li>
+<li><p>Close the browser to stop the application.</p></li>
+</ol>
+
+<p><a name="Ex3Task3"></a></p>
+
+<h4 id="Task_3_-_Working_with_Blobs">Task 3 - Working with Blobs</h4>
+
+<p>In this task you will configure the MVC application to upload images to Blob Storage. </p>
+
+<ol>
+<li><p>Open <strong>HomeController.cs</strong> and add the following directives to work with Blobs.</p>
+
+<span class="codelanguage">C#</span><pre><code class="C#"><span style="color:#0000FF">using</span> Microsoft.WindowsAzure.Storage.Blob;
+</code></pre></li>
+<li><p>Add the following helper method at the end of the class that allows you to retrieve the blob container from the storage account that will be used to store the images.</p>
+
+<p>(Code Snippet - <em>GettingStartedWindowsAzureStorage - Ex3-BlobHelper</em>)</p>
+
+<span class="codelanguage">C#</span><pre><code class="C#"><span style="color:#0000FF">private</span> CloudBlobContainer GetBlobContainer()
+{
+    <span style="color:#0000FF">var</span> client = <span style="color:#0000FF">this</span>.StorageAccount.CreateCloudBlobClient();
+    <span style="color:#0000FF">var</span> container = client.GetContainerReference(CloudConfigurationManager.GetSetting(<span style="color:#8B0000">&quot;ContainerName&quot;</span>));
+    <span style="color:#0000FF">if</span> (container.CreateIfNotExists())
+    {
+        container.SetPermissions(<span style="color:#0000FF">new</span> BlobContainerPermissions { PublicAccess = BlobContainerPublicAccessType.Blob });
+    }
+
+    <span style="color:#0000FF">return</span> container;
+}
+</code></pre></li>
+<li><p>Now, you will update the <strong>Create</strong> action of the <strong>HomeController</strong> to upload an image to a blob. You will save the blob reference name in the table to reference it in the future. To do this, add the following code in the <strong>Create</strong> <em>POST</em> action method.</p>
+
+<p>(Code Snippet - <em>GettingStartedWindowsAzureStorage - Ex3-BlobCreate</em>)</p>
+
+<!-- mark:9-21 -->
+
+<span class="codelanguage">C#</span><pre><code class="C#">[HttpPost]
+<span style="color:#0000FF">public</span> ActionResult Create(PhotoViewModel photoViewModel, HttpPostedFileBase file, FormCollection collection)
+{
+    <span style="color:#0000FF">if</span> (<span style="color:#0000FF">this</span>.ModelState.IsValid)
+    {
+        photoViewModel.PartitionKey = <span style="color:#0000FF">this</span>.User.Identity.IsAuthenticated ? <span style="color:#0000FF">this</span>.User.Identity.Name : <span style="color:#8B0000">&quot;Public&quot;</span>;
+        <span style="color:#0000FF">var</span> photo = <span style="color:#0000FF">this</span>.FromViewModel(photoViewModel);
+
+<strong class="markLine">        <span style="color:#0000FF">if</span> (file != <span style="color:#0000FF">null</span>)</strong>
+<strong class="markLine">        {</strong>
+<strong class="markLine">            <span style="color:#008000">// Save file stream to Blob Storage</span></strong>
+<strong class="markLine">            <span style="color:#0000FF">var</span> blob = <span style="color:#0000FF">this</span>.GetBlobContainer().GetBlockBlobReference(file.FileName);</strong>
+<strong class="markLine">            blob.Properties.ContentType = file.ContentType;</strong>
+<strong class="markLine">            blob.UploadFromStream(file.InputStream);</strong>
+<strong class="markLine">            photo.BlobReference = file.FileName;</strong>
+<strong class="markLine">        }</strong>
+<strong class="markLine">        <span style="color:#0000FF">else</span></strong>
+<strong class="markLine">        {</strong>
+<strong class="markLine">            <span style="color:#0000FF">this</span>.ModelState.AddModelError(<span style="color:#8B0000">&quot;File&quot;</span>,<span style="color:#0000FF">new</span> ArgumentNullException(<span style="color:#8B0000">&quot;file&quot;</span>));</strong>
+<strong class="markLine">            <span style="color:#0000FF">return</span> <span style="color:#0000FF">this</span>.View(photoViewModel);</strong>
+<strong class="markLine">        }</strong>
+
+        <span style="color:#008000">//Save information to Table Storage</span>
+        ...
+    }
+
+    <span style="color:#0000FF">return</span> <span style="color:#0000FF">this</span>.View();
+}
+</code></pre></li>
+<li><p>In the <strong>Details</strong> action, you will need to display the image that was stored in the blob container. To do this, you need to retrieve the URL using the <strong>Blob Reference</strong> name that was saved when creating a new entity. Add the following code.</p>
+
+<p>(Code Snippet - <em>GettingStartedWindowsAzureStorage - Ex3-BlobDetails</em>)</p>
+
+<!-- mark:6-9 -->
+
+<span class="codelanguage">C#</span><pre><code class="C#"><span style="color:#0000FF">public</span> ActionResult Details(<span style="color:#0000FF">string</span> partitionKey, <span style="color:#0000FF">string</span> rowKey)
+{
+    ...
+
+    <span style="color:#0000FF">var</span> viewModel = <span style="color:#0000FF">this</span>.ToViewModel(photo);
+<strong class="markLine">    <span style="color:#0000FF">if</span> (!<span style="color:#0000FF">string</span>.IsNullOrEmpty(photo.BlobReference))</strong>
+<strong class="markLine">    {</strong>
+<strong class="markLine">        viewModel.Uri = <span style="color:#0000FF">this</span>.GetBlobContainer().GetBlockBlobReference(photo.BlobReference).Uri.ToString();</strong>
+<strong class="markLine">    }</strong>
+
+    <span style="color:#0000FF">return</span> <span style="color:#0000FF">this</span>.View(viewModel);
+}   
+</code></pre></li>
+<li><p>Add the same line of code for the <strong>Edit</strong> <em>GET</em> Action to get the image when editing.</p>
+
+<p>(Code Snippet - <em>GettingStartedWindowsAzureStorage - Ex3-BlobEdit</em>)</p>
+
+<!-- mark:6-9 -->
+
+<span class="codelanguage">C#</span><pre><code class="C#"><span style="color:#0000FF">public</span> ActionResult Edit(<span style="color:#0000FF">string</span> partitionKey, <span style="color:#0000FF">string</span> rowKey)
+{
+    ...
+
+    <span style="color:#0000FF">var</span> viewModel = <span style="color:#0000FF">this</span>.ToViewModel(photo);
+<strong class="markLine">    <span style="color:#0000FF">if</span> (!<span style="color:#0000FF">string</span>.IsNullOrEmpty(photo.BlobReference))</strong>
+<strong class="markLine">    {</strong>
+<strong class="markLine">        viewModel.Uri = <span style="color:#0000FF">this</span>.GetBlobContainer().GetBlockBlobReference(photo.BlobReference).Uri.ToString();</strong>
+<strong class="markLine">    }</strong>
+
+    <span style="color:#0000FF">return</span> <span style="color:#0000FF">this</span>.View(viewModel);
+}   
+</code></pre></li>
+<li><p>Add the same code line for the <strong>Delete</strong> <em>GET</em> Action to get the image when deleting.</p>
+
+<p>(Code Snippet - <em>GettingStartedWindowsAzureStorage - Ex3-BlobDelete</em>)</p>
+
+<!-- mark:6-9 -->
+
+<span class="codelanguage">C#</span><pre><code class="C#"><span style="color:#0000FF">public</span> ActionResult Delete(<span style="color:#0000FF">string</span> partitionKey, <span style="color:#0000FF">string</span> rowKey)
+{
+    ...
+
+    <span style="color:#0000FF">var</span> viewModel = <span style="color:#0000FF">this</span>.ToViewModel(photo);
+<strong class="markLine">    <span style="color:#0000FF">if</span> (!<span style="color:#0000FF">string</span>.IsNullOrEmpty(photo.BlobReference))</strong>
+<strong class="markLine">    {</strong>
+<strong class="markLine">        viewModel.Uri = <span style="color:#0000FF">this</span>.GetBlobContainer().GetBlockBlobReference(photo.BlobReference).Uri.ToString();</strong>
+<strong class="markLine">    }</strong>
+
+    <span style="color:#0000FF">return</span> <span style="color:#0000FF">this</span>.View(viewModel);
+}   
+</code></pre></li>
+<li><p>To delete the blob from the container, you will use the blob reference name to retrieve the container and perform a <em>delete</em> operation. To do this, add the following code to the <strong>DeleteConfirmed</strong> action.</p>
+
+<p>(Code Snippet - <em>GettingStartedWindowsAzureStorage - Ex3-BlobPostDelete</em>)</p>
+
+<!-- mark:8-13 -->
+
+<span class="codelanguage">C#</span><pre><code class="C#">[HttpPost, ActionName(<span style="color:#8B0000">&quot;Delete&quot;</span>)]
+[ValidateAntiForgeryToken]
+<span style="color:#0000FF">public</span> ActionResult DeleteConfirmed(<span style="color:#0000FF">string</span> partitionKey, <span style="color:#0000FF">string</span> rowKey)
+{
+    <span style="color:#008000">//Delete information From Table Storage</span>
+    ...
+
+<strong class="markLine">    <span style="color:#008000">//Deletes the Image from Blob Storage</span></strong>
+<strong class="markLine">    <span style="color:#0000FF">if</span> (!<span style="color:#0000FF">string</span>.IsNullOrEmpty(photo.BlobReference))</strong>
+<strong class="markLine">    {</strong>
+<strong class="markLine">        <span style="color:#0000FF">var</span> blob = <span style="color:#0000FF">this</span>.GetBlobContainer().GetBlockBlobReference(photo.BlobReference);</strong>
+<strong class="markLine">        blob.DeleteIfExists();</strong>
+<strong class="markLine">    }</strong>
+
+    <span style="color:#0000FF">return</span> <span style="color:#0000FF">this</span>.RedirectToAction(<span style="color:#8B0000">&quot;Index&quot;</span>);
+}
+</code></pre></li>
+<li><p>Press <strong>F5</strong> to run the application.</p></li>
+<li><p>Browse for an image, insert a title and a description for it and then click <strong>Create</strong> to perform the upload.</p>
+
+<p><img src="Images/upload-image.png?raw=true" alt="Upload image" title="Upload image">
+</p>
+
+<p><em>Upload image</em></p>
+<blockquote>
+<p><strong>Note:</strong> You can use one of the images that are included in this lab in the <strong>Assets</strong> folder.</p>
+</blockquote></li>
+<li><p>Go to the <strong>Details</strong> page to check that the image uploaded successfully and then close the browser.</p></li>
+</ol>
+
+<p><a name="Ex3Task4"></a></p>
+
+<h4 id="Task_4_-_Working_with_Queues">Task 4 - Working with Queues</h4>
+
+<p>In this task, you will use queues to simulate a notification service, where a message is sent to a worker role for processing.</p>
+
+<ol>
+<li><p>Open <strong>HomeController.cs</strong> and add the following directive.</p>
+
+<span class="codelanguage">C#</span><pre><code class="C#"><span style="color:#0000FF">using</span> Microsoft.WindowsAzure.Storage.Queue;
+</code></pre></li>
+<li><p>You will add the following helper method at the end of the class to retrieve the <strong>Cloud Queue</strong> object.</p>
+
+<p>(Code Snippet - <em>GettingStartedWindowsAzureStorage - Ex3-QueueHelper</em>)</p>
+
+<span class="codelanguage">C#</span><pre><code class="C#"><span style="color:#0000FF">private</span> CloudQueue GetCloudQueue()
+{
+    <span style="color:#0000FF">var</span> queueClient = <span style="color:#0000FF">this</span>.StorageAccount.CreateCloudQueueClient();
+    <span style="color:#0000FF">var</span> queue = queueClient.GetQueueReference(<span style="color:#8B0000">&quot;messagequeue&quot;</span>);
+    queue.CreateIfNotExists();
+    <span style="color:#0000FF">return</span> queue;
+}
+</code></pre></li>
+<li><p>To notify that a new photo has uploaded, you must insert a message to the <strong>Queue</strong> with the specific text to be displayed. Add the following highlighted code in the <strong>Create</strong> <em>POST</em> action method.</p>
+
+<p>(Code Snippet - <em>GettingStartedWindowsAzureStorage - Ex3-QueueSendMessageCreate</em>)</p>
+
+<!-- mark:9-18 -->
+
+<span class="codelanguage">C#</span><pre><code class="C#">[HttpPost]
+<span style="color:#0000FF">public</span> ActionResult Create(PhotoViewModel photoViewModel, HttpPostedFileBase file, FormCollection collection)
+{
+    <span style="color:#0000FF">if</span> (<span style="color:#0000FF">this</span>.ModelState.IsValid)
+    {
+        ...
+        photoContext.AddPhoto(photo);
+
+<strong class="markLine">        <span style="color:#008000">//Send create notification</span></strong>
+<strong class="markLine">        <span style="color:#0000FF">try</span></strong>
+<strong class="markLine">        {</strong>
+<strong class="markLine">          <span style="color:#0000FF">var</span> msg = <span style="color:#0000FF">new</span> CloudQueueMessage(<span style="color:#8B0000">&quot;Photo Uploaded&quot;</span>);</strong>
+<strong class="markLine">          <span style="color:#0000FF">this</span>.GetCloudQueue().AddMessage(msg);</strong>
+<strong class="markLine">        }</strong>
+<strong class="markLine">        <span style="color:#0000FF">catch</span> (Exception e)</strong>
+<strong class="markLine">        {</strong>
+<strong class="markLine">          System.Diagnostics.Trace.TraceInformation(<span style="color:#8B0000">&quot;Error&quot;</span>, <span style="color:#8B0000">&quot;Couldn&#39;t send notification&quot;</span>);</strong>
+<strong class="markLine">        }</strong>
+
+        <span style="color:#0000FF">return</span> <span style="color:#0000FF">this</span>.RedirectToAction(<span style="color:#8B0000">&quot;Index&quot;</span>);
+    }
+
+    <span style="color:#0000FF">return</span> <span style="color:#0000FF">this</span>.View();
+}   
+</code></pre></li>
+<li><p>To notify that a photo was deleted, you must insert a message to the <strong>Queue</strong> with the specific text to be displayed. Add the following highlighted code to the <strong>DeleteConfirmed</strong> action method.</p>
+
+<p>(Code Snippet - <em>GettingStartedWindowsAzureStorage - Ex3-QueueSendMessageDelete</em>)</p>
+
+<!-- mark:7-16 -->
+
+<span class="codelanguage">C#</span><pre><code class="C#">[HttpPost, ActionName(<span style="color:#8B0000">&quot;Delete&quot;</span>)]
+[ValidateAntiForgeryToken]
+<span style="color:#0000FF">public</span> ActionResult DeleteConfirmed(<span style="color:#0000FF">string</span> id)
+{
+    ...
+
+<strong class="markLine">     <span style="color:#0000FF">try</span></strong>
+<strong class="markLine">     {</strong>
+<strong class="markLine">          <span style="color:#008000">//Send delete notification</span></strong>
+<strong class="markLine">          <span style="color:#0000FF">var</span> msg = <span style="color:#0000FF">new</span> CloudQueueMessage(<span style="color:#8B0000">&quot;Photo Deleted&quot;</span>);</strong>
+<strong class="markLine">          <span style="color:#0000FF">this</span>.GetCloudQueue().AddMessage(msg);</strong>
+<strong class="markLine">     }</strong>
+<strong class="markLine">     <span style="color:#0000FF">catch</span> (Exception e)</strong>
+<strong class="markLine">     {</strong>
+<strong class="markLine">          System.Diagnostics.Trace.TraceInformation(<span style="color:#8B0000">&quot;Error&quot;</span>, <span style="color:#8B0000">&quot;Couldn&#39;t send notification&quot;</span>);</strong>
+<strong class="markLine">     }</strong>
+
+    <span style="color:#0000FF">return</span> <span style="color:#0000FF">this</span>.RedirectToAction(<span style="color:#8B0000">&quot;Index&quot;</span>);
+}
+</code></pre></li>
+<li><p>Open the <strong>WorkerRole.cs</strong> file located in the <strong>QueueProcessor_WorkerRole</strong> project.</p></li>
+<li><p>The worker role will read the <strong>Queue</strong> for notification messages. First, you need to get a queue reference. To do this, add the following highlighted code in the <strong>Run</strong> method.</p>
+
+<p>(Code Snippet - <em>GettingStartedWindowsAzureStorage</em> - <em>Ex3-QueueWorkerAccount</em>)</p>
+
+<!-- mark:6-11 -->
+
+<span class="codelanguage">C#</span><pre><code class="C#"><span style="color:#0000FF">public</span> <span style="color:#0000FF">override</span> <span style="color:#0000FF">void</span> Run()
+{
+    <span style="color:#008000">// This is a sample worker implementation. Replace with your logic.</span>
+    Trace.TraceInformation(<span style="color:#8B0000">&quot;QueueProcessor_WorkerRole entry point called&quot;</span>, <span style="color:#8B0000">&quot;Information&quot;</span>);
+
+<strong class="markLine">    <span style="color:#008000">// Initialize the account information</span></strong>
+<strong class="markLine">    <span style="color:#0000FF">var</span> storageAccount = CloudStorageAccount.Parse(CloudConfigurationManager.GetSetting(<span style="color:#8B0000">&quot;StorageConnectionString&quot;</span>));</strong>
+<strong class="markLine"></strong>
+<strong class="markLine">    <span style="color:#008000">// retrieve a reference to the messages queue</span></strong>
+<strong class="markLine">    <span style="color:#0000FF">var</span> queueClient = storageAccount.CreateCloudQueueClient();</strong>
+<strong class="markLine">    <span style="color:#0000FF">var</span> queue = queueClient.GetQueueReference(<span style="color:#8B0000">&quot;messagequeue&quot;</span>);</strong>
+
+    <span style="color:#0000FF">while</span> (<span style="color:#0000FF">true</span>)
+    {
+        Thread.Sleep(10000);
+        Trace.TraceInformation(<span style="color:#8B0000">&quot;Working&quot;</span>, <span style="color:#8B0000">&quot;Information&quot;</span>);           
+    }
+}
+</code></pre></li>
+<li><p>Now, add the following code inside the <strong>while</strong> block to read messages from the queue.</p>
+
+<p>(Code Snippet - <em>GettingStartedWindowsAzureStorage - Ex3-QueueReadingMessages</em>)</p>
+
+<!-- mark:9-18 -->
+
+<span class="codelanguage">C#</span><pre><code class="C#"><span style="color:#0000FF">public</span> <span style="color:#0000FF">override</span> <span style="color:#0000FF">void</span> Run()
+{       
+    ...
+
+    <span style="color:#0000FF">while</span> (<span style="color:#0000FF">true</span>)
+    {
+        Thread.Sleep(10000);
+        Trace.TraceInformation(<span style="color:#8B0000">&quot;Working&quot;</span>, <span style="color:#8B0000">&quot;Information&quot;</span>);       
+<strong class="markLine">        <span style="color:#0000FF">if</span> (queue.Exists())</strong>
+<strong class="markLine">        {</strong>
+<strong class="markLine">            <span style="color:#0000FF">var</span> msg = queue.GetMessage();</strong>
+<strong class="markLine"></strong>
+<strong class="markLine">            <span style="color:#0000FF">if</span> (msg != <span style="color:#0000FF">null</span>)</strong>
+<strong class="markLine">            {</strong>
+<strong class="markLine">                Trace.TraceInformation(<span style="color:#0000FF">string</span>.Format(<span style="color:#8B0000">&quot;Message &#39;{0}&#39; processed.&quot;</span>, msg.AsString));</strong>
+<strong class="markLine">                queue.DeleteMessage(msg);</strong>
+<strong class="markLine">            }</strong>
+<strong class="markLine">        }   </strong>
+    }
+}
+</code></pre>
+<blockquote>
+<p><strong>Note:</strong> The worker process will try to get a message from the queue every 10 seconds using the <strong>GetMessage</strong> method. If there are messages in the queue, they will be shown them in the Compute Emulator log.</p>
+</blockquote></li>
+<li><p>Press <strong>F5</strong> to run the application. Once the browser has opened, upload a new image.</p></li>
+<li><p>Open the <strong>Compute Emulator</strong>. To do so, right-click the Windows Azure icon tray and select <strong>Show Compute Emulator UI</strong>.</p>
+
+<p><img src="Images/windows-azure-tray-icon.png?raw=true" alt="Windows Azure Tray Icon" title="Windows Azure Tray Icon">
+</p>
+
+<p><em>Windows Azure Tray Icon</em></p></li>
+<li><p>Select the worker role instance. Wait until the process reads the message from the queue.</p>
+
+<p><img src="Images/worker-role-processing-the-queue.png?raw=true" alt="Worker role processing the queue" title="Worker role processing the queue">
+</p>
+
+<p><em>Worker role processing the queue</em></p></li>
+</ol>
+
+<p><a name="Ex3Task5"></a></p>
+
+<h4 id="Task_5_-_Verification_with_Visual_Studio">Task 5 - Verification with Visual Studio</h4>
+
+<p>In this task, you will use Visual Studio to inspect the Windows Azure Storage Account.</p>
+
+<ol>
+<li><p>If not already opened, open <strong>Visual Studio Express 2012 for Web</strong>.</p></li>
+<li><p>Go to the <strong>View</strong> menu, and open <strong>Database Explorer</strong>.</p></li>
+<li><p>In the Database Explorer pane, right-click <strong>Windows Azure Storage</strong> and select <strong>Add New Storage Account</strong>.</p>
+
+<p><img src="Images/database-explorer.png?raw=true" alt="Database Explorer" title="Database Explorer">
+</p>
+
+<p><em>Database Explorer</em></p></li>
+<li><p>Select <strong>Manually entered credentials</strong> and complete the <strong>Account name</strong> and <strong>Account key</strong> fields with the keys of the storage account you created in Exercise 1. Click <strong>OK</strong>.</p>
+
+<p><img src="Images/add-new-storage-account.png?raw=true" alt="Add New Storage Account" title="Add New Storage Account">
+</p>
+
+<p><em>Add New Storage Account</em></p></li>
+<li><p>Expand the storage account you configured in the Database Explorer. Notice that there is an entry for Tables, Blobs and Queues.</p></li>
+<li><p>Expand the <strong>Tables</strong> container. You will see the <strong>Photos</strong> table under it.</p>
+
+<p><img src="Images/photos-table-in-database-explorer.png?raw=true" alt="Photos Table in Database Explorer" title="Photos Table in Database Explorer">
+</p>
+
+<p><em>Photos Table in Database Explorer</em></p></li>
+<li><p>Right-click the <strong>Photos</strong> table and select <strong>View Table</strong>.</p>
+
+<p><img src="Images/photo-table.png?raw=true" alt="Photos Table" title="Photos Table">
+</p>
+
+<p><em>Photos Table</em></p>
+<blockquote>
+<p><strong>Note</strong>: You can see the data you've created in the previous task. Notice the blob reference column. This column references the name of a blob storage.</p>
+</blockquote></li>
+<li><p>Expand the <strong>Blobs</strong> container. Right-click the gallery blob and select <strong>View Blob Container</strong>. </p>
+
+<p><img src="Images/blob-container.png?raw=true" alt="Gallery Blob Container" title="Gallery Blob Container">
+</p>
+
+<p><em>Gallery Blob Container</em></p></li>
+</ol>
+
+<p><a name="Exercise4"></a></p>
+
+<h3 id="Exercise_4_Introducing_SAS_Shared_Access_Signature">Exercise 4: Introducing SAS (Shared Access Signature)</h3>
+
+<p>Shared Access Signatures allow granular access to tables, queues, blob containers, and blobs. A SAS token can be configured to provide specific access rights, such as read, write, update, delete, etc. to a specific table, key range within a table, queue, blob, or blob container; for a specified time period or without any limit. The SAS token appears as part of the resource's URI as a series of query parameters.</p>
+
+<p>In this exercise you will learn how to use Shared Access Signatures with the three storage abstractions: Tables, Blobs, and Queues.</p>
+<blockquote>
+<p><strong>Note:</strong> This sample application does not follow all best practices for using Shared Access Signature for simplicity's sake. In a production environment you will typically have a service that generates the SAS for your application.</p>
+</blockquote>
+<p><a name="Ex4Task1"></a></p>
+
+<h4 id="Task_1_-_Adding_SAS_at_table_level">Task 1 - Adding SAS at table level</h4>
+
+<p>In this task you will learn how to create SAS for Azure tables. SAS for table allows owners to grant SAS token access by restricting the operations in several ways.</p>
+
+<p>You can grant access to an entire table, to a table range (for example, to all the rows under a particular partition key), or some specific rows. Additionally, you can grant access rights to the specified table or table range such as <em>Query</em>, <em>Add</em>, <em>Update</em>, <em>Delete</em> or a combination of them. Finally, you can specify the SAS token access time.</p>
+
+<ol>
+<li><p>Continue working with the end solution of the previous exercise or open the solution located at <em>Source/Ex04-IntroducingSAS/Begin</em>.</p></li>
+<li><p>Open the <strong>PhotoEntity</strong> class, located in the <em>Models</em> folder.</p></li>
+<li><p>Modify the default constructor to use <em>&quot;Public&quot;</em> as the partition key by default, and add an overloaded constructor that receives a partition key as a parameter.</p>
+
+<p>(Code Snippet - <em>GettingStartedWindowsAzureStorage</em> - <em>Ex4-UpdatePhotoEntityConstructors</em>)</p>
+
+<!-- mark:3-13 -->
+
+<span class="codelanguage">C#</span><pre><code class="C#"><span style="color:#0000FF">public</span> <span style="color:#0000FF">class</span> PhotoEntity : TableEntity
+{
+<strong class="markLine">    <span style="color:#0000FF">public</span> PhotoEntity() </strong>
+<strong class="markLine">    {</strong>
+<strong class="markLine">        PartitionKey = <span style="color:#8B0000">&quot;Public&quot;</span>;</strong>
+<strong class="markLine">        RowKey = Guid.NewGuid().ToString();</strong>
+<strong class="markLine">    }</strong>
+<strong class="markLine"></strong>
+<strong class="markLine">    <span style="color:#0000FF">public</span> PhotoEntity(<span style="color:#0000FF">string</span> partitionKey)</strong>
+<strong class="markLine">    {</strong>
+<strong class="markLine">        PartitionKey = partitionKey;</strong>
+<strong class="markLine">        RowKey = Guid.NewGuid().ToString();</strong>
+<strong class="markLine">    }</strong>
+
+    ...
+}
+</code></pre></li>
+<li><p>Open the <strong>PhotoDataServiceContext.cs</strong> file and create a new method called <strong>GetSas</strong>.</p>
+
+<p>(Code Snippet - <em>GettingStartedWindowsAzureStorage</em> - <em>Ex4-NewImplementationGetSasMethod</em>)</p>
+
+<!-- mark:1-18 -->
+
+<span class="codelanguage">C#</span><pre><code class="C#"><strong class="markLine"><span style="color:#0000FF">public</span> <span style="color:#0000FF">string</span> GetSas(<span style="color:#0000FF">string</span> partition, SharedAccessTablePermissions permissions)</strong>
+<strong class="markLine">{</strong>
+<strong class="markLine">    SharedAccessTablePolicy policy = <span style="color:#0000FF">new</span> SharedAccessTablePolicy()</strong>
+<strong class="markLine">    {</strong>
+<strong class="markLine">        SharedAccessExpiryTime = DateTime.UtcNow.AddMinutes(15),</strong>
+<strong class="markLine">        Permissions = permissions</strong>
+<strong class="markLine">    };</strong>
+<strong class="markLine"></strong>
+<strong class="markLine">    <span style="color:#0000FF">string</span> sasToken = <span style="color:#0000FF">this</span>.ServiceClient.GetTableReference(<span style="color:#8B0000">&quot;Photos&quot;</span>).GetSharedAccessSignature(</strong>
+<strong class="markLine">        policy   <span style="color:#008000">/* access policy */</span>,</strong>
+<strong class="markLine">        <span style="color:#0000FF">null</span>     <span style="color:#008000">/* access policy identifier */</span>,</strong>
+<strong class="markLine">        partition <span style="color:#008000">/* start partition key */</span>,</strong>
+<strong class="markLine">        <span style="color:#0000FF">null</span>     <span style="color:#008000">/* start row key */</span>,</strong>
+<strong class="markLine">        partition <span style="color:#008000">/* end partition key */</span>,</strong>
+<strong class="markLine">        <span style="color:#0000FF">null</span>     <span style="color:#008000">/* end row key */</span>);</strong>
+<strong class="markLine"></strong>
+<strong class="markLine">    <span style="color:#0000FF">return</span> sasToken;</strong>
+<strong class="markLine">}</strong>
+</code></pre>
+<blockquote>
+<p><strong>Note</strong>: This method takes the partition and the permissions passed as parameters and creates a SAS for the <em>Photos</em> table. This SAS will grant the specified permissions only to the rows that correspond to that partition. Finally, it returns the SAS in string format.</p>
+</blockquote></li>
+<li><p>Go to the controller folder and create a new base controller. To do so, right click in the controller folder, go to <strong>Add</strong> and select <strong>Controller...</strong>.</p></li>
+<li><p>Name the file <strong>BaseController</strong> and click <strong>Add</strong>.</p>
+
+<p><img src="Images/basecontroller-creation.png?raw=true" alt="BaseController creation" title="BaseController creation">
+</p>
+
+<p><em>BaseController creation</em></p></li>
+<li><p>Remove the <em>index</em> method created by default.</p></li>
+<li><p>Add the following using statements to the <strong>BaseController</strong> class.</p>
+
+<p>(Code Snippet - <em>GettingStartedWindowsAzureStorage</em> - <em>Ex4-BaseControllerUsingStatements</em>)</p>
+
+<!-- mark:1-4 -->
+
+<span class="codelanguage">C#</span><pre><code class="C#"><strong class="markLine"><span style="color:#0000FF">using</span> Microsoft.WindowsAzure;</strong>
+<strong class="markLine"><span style="color:#0000FF">using</span> Microsoft.WindowsAzure.Storage;</strong>
+<strong class="markLine"><span style="color:#0000FF">using</span> Microsoft.WindowsAzure.Storage.Table;</strong>
+<strong class="markLine"><span style="color:#0000FF">using</span> PhotoUploader_WebRole.Models;</strong>
+</code></pre></li>
+<li><p>Add the following public properties to the <strong>BaseController</strong>.</p>
+
+<p>(Code Snippet - <em>GettingStartedWindowsAzureStorage</em> - <em>Ex4-BaseControllerProperties</em>)</p>
+
+<!-- mark:1-4 -->
+
+<span class="codelanguage">C#</span><pre><code class="C#"><strong class="markLine"><span style="color:#0000FF">public</span> CloudStorageAccount StorageAccount = CloudStorageAccount.Parse(CloudConfigurationManager.GetSetting(<span style="color:#8B0000">&quot;StorageConnectionString&quot;</span>));</strong>
+<strong class="markLine"><span style="color:#0000FF">public</span> Uri UriTable = <span style="color:#0000FF">new</span> Uri(<span style="color:#8B0000">&quot;http://127.0.0.1:10002/devstoreaccount1&quot;</span>);</strong>
+<strong class="markLine"><span style="color:#0000FF">public</span> <span style="color:#0000FF">string</span> AuthenticatedTableSas { <span style="color:#0000FF">get</span>; <span style="color:#0000FF">set</span>; }</strong>
+<strong class="markLine"><span style="color:#0000FF">public</span> <span style="color:#0000FF">string</span> PublicTableSas { <span style="color:#0000FF">get</span>; <span style="color:#0000FF">set</span>; }</strong>
+</code></pre>
+<blockquote>
+<p><strong>Note</strong>: Replace the <em><a href="http://127.0.0.1:10002/devstoreaccount1">http://127.0.0.1:10002/devstoreaccount1</a></em> with your storage account table URI in order to work against Windows Azure.</p>
+</blockquote></li>
+<li><p>Override the <strong>OnActionExecuting</strong> method in the <strong>BaseController</strong> class.</p>
+
+<p>(Code Snippet - <em>GettingStartedWindowsAzureStorage</em> - <em>Ex4-BaseControllerOnActionExecutingMethod</em>)</p>
+
+<!-- mark:1-16 -->
+
+<span class="codelanguage">C#</span><pre><code class="C#"><strong class="markLine"><span style="color:#0000FF">protected</span> <span style="color:#0000FF">override</span> <span style="color:#0000FF">void</span> OnActionExecuting(ActionExecutingContext filterContext)</strong>
+<strong class="markLine">{</strong>
+<strong class="markLine">    CloudTableClient cloudTableClientAdmin = <span style="color:#0000FF">this</span>.StorageAccount.CreateCloudTableClient();</strong>
+<strong class="markLine">    <span style="color:#0000FF">var</span> photoContextAdmin = <span style="color:#0000FF">new</span> PhotoDataServiceContext(cloudTableClientAdmin);</strong>
+<strong class="markLine"></strong>
+<strong class="markLine">    <span style="color:#0000FF">if</span> (<span style="color:#0000FF">this</span>.User.Identity.IsAuthenticated)</strong>
+<strong class="markLine">    {</strong>
+<strong class="markLine">         <span style="color:#0000FF">this</span>.AuthenticatedTableSas = photoContextAdmin.GetSas(<span style="color:#0000FF">this</span>.User.Identity.Name, SharedAccessTablePermissions.Add | SharedAccessTablePermissions.Delete | SharedAccessTablePermissions.Query | SharedAccessTablePermissions.Update);</strong>
+<strong class="markLine">         <span style="color:#0000FF">this</span>.PublicTableSas = photoContextAdmin.GetSas(<span style="color:#8B0000">&quot;Public&quot;</span>, SharedAccessTablePermissions.Add | SharedAccessTablePermissions.Delete | SharedAccessTablePermissions.Query | SharedAccessTablePermissions.Update);</strong>
+<strong class="markLine">    }</strong>
+<strong class="markLine">    <span style="color:#0000FF">else</span></strong>
+<strong class="markLine">    {</strong>
+<strong class="markLine">         <span style="color:#0000FF">this</span>.PublicTableSas = photoContextAdmin.GetSas(<span style="color:#8B0000">&quot;Public&quot;</span>, SharedAccessTablePermissions.Add | SharedAccessTablePermissions.Update | SharedAccessTablePermissions.Query);</strong>
+<strong class="markLine">         <span style="color:#0000FF">this</span>.AuthenticatedTableSas = <span style="color:#0000FF">null</span>;</strong>
+<strong class="markLine">    }</strong>
+<strong class="markLine">}</strong>
+</code></pre>
+<blockquote>
+<p><strong>Note:</strong> The <strong>OnActionExecuting</strong> method is called everytime an action from the derived controller is called. Therefore this is the place where we will generate the SAS for table.</p>
+</blockquote></li>
+<li><p>Open the <strong>HomeController</strong> class, located in the <em>Controllers</em> folder.</p></li>
+<li><p>Update the <strong>HomeController</strong> in order to inheritate from <strong>BaseController</strong> and remove the <strong>StorageAccount</strong> property.</p>
+
+<span class="codelanguage">C#</span><pre><code class="C#"><span style="color:#0000FF">public</span> <span style="color:#0000FF">class</span> HomeController : BaseController
+{
+    <span style="color:#008000">//</span>
+    <span style="color:#008000">// GET: /</span>
+
+    <span style="color:#0000FF">public</span> ActionResult Index()
+    {   
+        ...
+    }
+    ...
+}
+
+</code></pre></li>
+<li><p>Add the following using to the <strong>HomeController</strong>.</p>
+
+<span class="codelanguage">C#</span><pre><code class="C#"><span style="color:#0000FF">using</span> Microsoft.WindowsAzure.Storage.Auth;
+<span style="color:#0000FF">using</span> System.Collections.Generic;
+</code></pre></li>
+<li><p>Replace the <strong>Index</strong> action with the following code.</p>
+
+<p>(Code Snippet - <em>GettingStartedWindowsAzureStorage</em> - <em>Ex4-HomeControllerIndexAction</em>)</p>
+
+<!-- mark:3-27 -->
+
+<span class="codelanguage">C#</span><pre><code class="C#"><span style="color:#0000FF">public</span> ActionResult Index()
+{
+<strong class="markLine">    CloudTableClient cloudTableClient = <span style="color:#0000FF">new</span> CloudTableClient(<span style="color:#0000FF">this</span>.UriTable, <span style="color:#0000FF">new</span> StorageCredentials(<span style="color:#0000FF">this</span>.PublicTableSas));</strong>
+<strong class="markLine">    <span style="color:#0000FF">var</span> photoContext = <span style="color:#0000FF">new</span> PhotoDataServiceContext(cloudTableClient);</strong>
+<strong class="markLine">    <span style="color:#0000FF">var</span> photoList = <span style="color:#0000FF">new</span> List&lt;PhotoViewModel&gt;();</strong>
+<strong class="markLine"></strong>
+<strong class="markLine">    <span style="color:#0000FF">var</span> photos = photoContext.GetPhotos();</strong>
+<strong class="markLine">    <span style="color:#0000FF">if</span> (photos.Count() &gt; 0)</strong>
+<strong class="markLine">    {</strong>
+<strong class="markLine">        photoList = photos.Select(x =&gt; <span style="color:#0000FF">this</span>.ToViewModel(x)).ToList();</strong>
+<strong class="markLine">    }</strong>
+<strong class="markLine"></strong>
+<strong class="markLine">    <span style="color:#0000FF">var</span> privatePhotos = <span style="color:#0000FF">new</span> List&lt;PhotoViewModel&gt;();</strong>
+<strong class="markLine"></strong>
+<strong class="markLine">    <span style="color:#0000FF">if</span> (<span style="color:#0000FF">this</span>.User.Identity.IsAuthenticated)</strong>
+<strong class="markLine">    {</strong>
+<strong class="markLine">        cloudTableClient = <span style="color:#0000FF">new</span> CloudTableClient(<span style="color:#0000FF">this</span>.UriTable, <span style="color:#0000FF">new</span> StorageCredentials(<span style="color:#0000FF">this</span>.AuthenticatedTableSas));</strong>
+<strong class="markLine">        photoContext = <span style="color:#0000FF">new</span> PhotoDataServiceContext(cloudTableClient);</strong>
+<strong class="markLine"></strong>
+<strong class="markLine">        photos = photoContext.GetPhotos();</strong>
+<strong class="markLine">        <span style="color:#0000FF">if</span> (photos.Count() &gt; 0)</strong>
+<strong class="markLine">        {</strong>
+<strong class="markLine">            photoList.AddRange(photos.Select(x =&gt; <span style="color:#0000FF">this</span>.ToViewModel(x)).ToList());</strong>
+<strong class="markLine">        }</strong>
+<strong class="markLine">    }</strong>
+<strong class="markLine"></strong>
+<strong class="markLine">    <span style="color:#0000FF">return</span> <span style="color:#0000FF">this</span>.View(photoList);</strong>
+}
+</code></pre></li>
+<li><p>Scroll down to the <strong>Details</strong> action and update the <em>CloudTableClient</em> creation method with the following code. </p>
+
+<p>(Code Snippet - <em>GettingStartedWindowsAzureStorage</em> - <em>Ex4-NewCloudTableClientCall</em>)</p>
+
+<!-- mark:1-2 -->
+
+<span class="codelanguage">C#</span><pre><code class="C#"><strong class="markLine"><span style="color:#0000FF">var</span> token = partitionKey == <span style="color:#8B0000">&quot;Public&quot;</span> ? <span style="color:#0000FF">this</span>.PublicTableSas : <span style="color:#0000FF">this</span>.AuthenticatedTableSas;</strong>
+<strong class="markLine">CloudTableClient cloudTableClient = <span style="color:#0000FF">new</span> CloudTableClient(<span style="color:#0000FF">this</span>.UriTable, <span style="color:#0000FF">new</span> StorageCredentials(token));</strong>
+</code></pre></li>
+<li><p>Repeate the previous step in the <strong>Edit</strong> and <strong>Delete</strong> <em>GET</em> actions and in the <strong>Delete</strong> <em>Post</em> action.</p></li>
+<li><p>Locate the <strong>Create</strong> <em>Post</em> action and add new <strong>bool</strong> parameter called <strong>Public</strong>.</p>
+
+<span class="codelanguage">C#</span><pre><code class="C#">[HttpPost]
+<span style="color:#0000FF">public</span> ActionResult Create(PhotoViewModel photoViewModel, HttpPostedFileBase file, <span style="color:#0000FF">bool</span> Public, FormCollection collection)
+{
+    ...
+}
+</code></pre></li>
+<li><p>Update the <strong>Create</strong> <em>Post</em> action and update the <em>photoViewModel</em> partitionKey with the following.</p>
+
+<!-- mark:1 -->
+
+<span class="codelanguage">C#</span><pre><code class="C#"><strong class="markLine">photoViewModel.PartitionKey = Public ? <span style="color:#8B0000">&quot;Public&quot;</span> : <span style="color:#0000FF">this</span>.User.Identity.Name;</strong>
+</code></pre></li>
+<li><p>Locate the <em>CloudTableClient</em> creation in the <strong>Create</strong> <em>Post</em> action and replace it with the following code.</p>
+
+<p>(Code Snippet - <em>GettingStartedWindowsAzureStorage</em> - <em>Ex4-CreatePostActionUpdate</em>)</p>
+
+<!-- mark:1-8 -->
+
+<span class="codelanguage">C#</span><pre><code class="C#"><strong class="markLine"><span style="color:#0000FF">var</span> token = Public ? <span style="color:#0000FF">this</span>.PublicTableSas : <span style="color:#0000FF">this</span>.AuthenticatedTableSas;</strong>
+<strong class="markLine"><span style="color:#0000FF">if</span> (!<span style="color:#0000FF">this</span>.User.Identity.IsAuthenticated)</strong>
+<strong class="markLine">{</strong>
+<strong class="markLine">    token = <span style="color:#0000FF">this</span>.PublicTableSas;</strong>
+<strong class="markLine">    photo.PartitionKey = <span style="color:#8B0000">&quot;Public&quot;</span>;</strong>
+<strong class="markLine">}</strong>
+<strong class="markLine"></strong>
+<strong class="markLine">CloudTableClient cloudTableClient = <span style="color:#0000FF">new</span> CloudTableClient(<span style="color:#0000FF">this</span>.UriTable, <span style="color:#0000FF">new</span> StorageCredentials(token));</strong>
+</code></pre></li>
+<li><p>Scroll down to the <strong>Edit</strong> <em>Post</em> action and update the <em>CloudTableClient</em> creation with the following code.</p>
+
+<p>(Code Snippet - <em>GettingStartedWindowsAzureStorage</em> - <em>Ex4-NewCloudTableClientCall-EditPost</em>)</p>
+
+<!-- mark:1-2 -->
+
+<span class="codelanguage">C#</span><pre><code class="C#"><strong class="markLine"><span style="color:#0000FF">var</span> token = photoViewModel.PartitionKey == <span style="color:#8B0000">&quot;Public&quot;</span> ? <span style="color:#0000FF">this</span>.PublicTableSas : <span style="color:#0000FF">this</span>.AuthenticatedTableSas;</strong>
+<strong class="markLine">CloudTableClient cloudTableClient = <span style="color:#0000FF">new</span> CloudTableClient(<span style="color:#0000FF">this</span>.UriTable, <span style="color:#0000FF">new</span> StorageCredentials(token));</strong>
+</code></pre></li>
+<li><p>Create a new action called <strong>ToPublic</strong> and add the following code in its body. This method will delete a private blob (one created with a username as the partition key) and it will re-create it with &quot;Public&quot; as the partition key.</p>
+
+<p>(Code Snippet - <em>GettingStartedWindowsAzureStorage</em> - <em>Ex4-ToPublicAction</em>)</p>
+
+<!-- mark:1-20 -->
+
+<span class="codelanguage">C#</span><pre><code class="C#"><strong class="markLine">[HttpGet]</strong>
+<strong class="markLine"><span style="color:#0000FF">public</span> ActionResult ToPublic(<span style="color:#0000FF">string</span> partitionKey, <span style="color:#0000FF">string</span> rowKey)</strong>
+<strong class="markLine">{</strong>
+<strong class="markLine">    CloudTableClient cloudTableClient = <span style="color:#0000FF">new</span> CloudTableClient(<span style="color:#0000FF">this</span>.UriTable, <span style="color:#0000FF">new</span> StorageCredentials(<span style="color:#0000FF">this</span>.AuthenticatedTableSas));</strong>
+<strong class="markLine">    <span style="color:#0000FF">var</span> photoContext = <span style="color:#0000FF">new</span> PhotoDataServiceContext(cloudTableClient);</strong>
+<strong class="markLine">    <span style="color:#0000FF">var</span> photo = photoContext.GetById(partitionKey, rowKey);</strong>
+<strong class="markLine">    <span style="color:#0000FF">if</span> (photo == <span style="color:#0000FF">null</span>)</strong>
+<strong class="markLine">    {</strong>
+<strong class="markLine">        <span style="color:#0000FF">return</span> <span style="color:#0000FF">this</span>.HttpNotFound();</strong>
+<strong class="markLine">    }</strong>
+<strong class="markLine"></strong>
+<strong class="markLine">    photoContext.DeletePhoto(photo);</strong>
+<strong class="markLine"></strong>
+<strong class="markLine">    cloudTableClient = <span style="color:#0000FF">new</span> CloudTableClient(<span style="color:#0000FF">this</span>.UriTable, <span style="color:#0000FF">new</span> StorageCredentials(<span style="color:#0000FF">this</span>.PublicTableSas));</strong>
+<strong class="markLine">    photoContext = <span style="color:#0000FF">new</span> PhotoDataServiceContext(cloudTableClient);</strong>
+<strong class="markLine">    photo.PartitionKey = <span style="color:#8B0000">&quot;Public&quot;</span>;</strong>
+<strong class="markLine">    photoContext.AddPhoto(photo);</strong>
+<strong class="markLine"></strong>
+<strong class="markLine">    <span style="color:#0000FF">return</span> RedirectToAction(<span style="color:#8B0000">&quot;Index&quot;</span>);</strong>
+<strong class="markLine">}</strong>
+</code></pre></li>
+<li><p>In the same way, create a new action called <strong>ToPrivate</strong>, and add the following code in the method's body. As opposite to the <strong>ToPublic</strong> method, this one will remove the photo's row from the <em>Public</em> partition key and re-add it to the logged user partition. Therefore, this method needs a logged user to work.</p>
+
+<p>(Code Snippet - <em>GettingStartedWindowsAzureStorage</em> - <em>Ex4-ToPrivateAction</em>)</p>
+
+<!-- mark:1-20 -->
+
+<span class="codelanguage">C#</span><pre><code class="C#"><strong class="markLine">[HttpGet]</strong>
+<strong class="markLine"><span style="color:#0000FF">public</span> ActionResult ToPrivate(<span style="color:#0000FF">string</span> partitionKey, <span style="color:#0000FF">string</span> rowKey)</strong>
+<strong class="markLine">{</strong>
+<strong class="markLine">    CloudTableClient cloudTableClient = <span style="color:#0000FF">new</span> CloudTableClient(<span style="color:#0000FF">this</span>.UriTable, <span style="color:#0000FF">new</span> StorageCredentials(<span style="color:#0000FF">this</span>.PublicTableSas));</strong>
+<strong class="markLine">    <span style="color:#0000FF">var</span> photoContext = <span style="color:#0000FF">new</span> PhotoDataServiceContext(cloudTableClient);</strong>
+<strong class="markLine">    <span style="color:#0000FF">var</span> photo = photoContext.GetById(partitionKey, rowKey);</strong>
+<strong class="markLine">    <span style="color:#0000FF">if</span> (photo == <span style="color:#0000FF">null</span>)</strong>
+<strong class="markLine">    {</strong>
+<strong class="markLine">        <span style="color:#0000FF">return</span> <span style="color:#0000FF">this</span>.HttpNotFound();</strong>
+<strong class="markLine">    }</strong>
+<strong class="markLine"></strong>
+<strong class="markLine">    photoContext.DeletePhoto(photo);</strong>
+<strong class="markLine"></strong>
+<strong class="markLine">    cloudTableClient = <span style="color:#0000FF">new</span> CloudTableClient(<span style="color:#0000FF">this</span>.UriTable, <span style="color:#0000FF">new</span> StorageCredentials(<span style="color:#0000FF">this</span>.AuthenticatedTableSas));</strong>
+<strong class="markLine">    photoContext = <span style="color:#0000FF">new</span> PhotoDataServiceContext(cloudTableClient);</strong>
+<strong class="markLine">    photo.PartitionKey = <span style="color:#0000FF">this</span>.User.Identity.Name;</strong>
+<strong class="markLine">    photoContext.AddPhoto(photo);</strong>
+<strong class="markLine"></strong>
+<strong class="markLine">    <span style="color:#0000FF">return</span> RedirectToAction(<span style="color:#8B0000">&quot;Index&quot;</span>);</strong>
+<strong class="markLine">}</strong>
+</code></pre></li>
+<li><p>Open the <strong>Index.cshtml</strong> file, located in the <em>Views/Home</em> folder.</p></li>
+<li><p>Locate the <em>foreach</em> statement, and add the following code at the end of the <strong>tr</strong> element. This code will add the <em>To Public</em> and <em>To Private</em> links next to each photo when corresponds.</p>
+
+<p>(Code Snippet - <em>GettingStartedWindowsAzureStorage</em> - <em>Ex4-IndexViewUpdate</em>)</p>
+
+<!-- mark:11-21 -->
+
+<span class="codelanguage">HTML</span><pre><code class="HTML">@foreach (var photo in this.Model)
+{
+    <span style="color:#0000FF">&lt;</span><span style="color:#800000">tr</span><span style="color:#0000FF">&gt;</span>
+        <span style="color:#0000FF">&lt;</span><span style="color:#800000">td</span><span style="color:#0000FF">&gt;</span>@photo.PartitionKey<span style="color:#0000FF">&lt;/</span><span style="color:#800000">td</span><span style="color:#0000FF">&gt;</span>
+        <span style="color:#0000FF">&lt;</span><span style="color:#800000">td</span><span style="color:#0000FF">&gt;</span>@photo.Title<span style="color:#0000FF">&lt;/</span><span style="color:#800000">td</span><span style="color:#0000FF">&gt;</span>
+        <span style="color:#0000FF">&lt;</span><span style="color:#800000">td</span><span style="color:#0000FF">&gt;</span>@photo.Description<span style="color:#0000FF">&lt;/</span><span style="color:#800000">td</span><span style="color:#0000FF">&gt;</span>
+        <span style="color:#0000FF">&lt;</span><span style="color:#800000">td</span><span style="color:#0000FF">&gt;</span>@Html.ActionLink(&quot;Edit&quot;, &quot;Edit&quot;, new { partitionKey = photo.PartitionKey, rowKey = photo.RowKey })<span style="color:#0000FF">&lt;/</span><span style="color:#800000">td</span><span style="color:#0000FF">&gt;</span>
+        <span style="color:#0000FF">&lt;</span><span style="color:#800000">td</span><span style="color:#0000FF">&gt;</span>@Html.ActionLink(&quot;Details&quot;, &quot;Details&quot;, new { partitionKey = photo.PartitionKey, rowKey = photo.RowKey })<span style="color:#0000FF">&lt;/</span><span style="color:#800000">td</span><span style="color:#0000FF">&gt;</span>
+        <span style="color:#0000FF">&lt;</span><span style="color:#800000">td</span><span style="color:#0000FF">&gt;</span>@Html.ActionLink(&quot;Delete&quot;, &quot;Delete&quot;, new { partitionKey = photo.PartitionKey, rowKey = photo.RowKey })<span style="color:#0000FF">&lt;/</span><span style="color:#800000">td</span><span style="color:#0000FF">&gt;</span>
+
+<strong class="markLine">        @if (photo.PartitionKey == &quot;Public&quot;)</strong>
+<strong class="markLine">        {</strong>
+<strong class="markLine">            if (this.User.Identity.IsAuthenticated)</strong>
+<strong class="markLine">            {</strong>
+<strong class="markLine">                <span style="color:#0000FF">&lt;</span><span style="color:#800000">td</span><span style="color:#0000FF">&gt;</span>@Html.ActionLink(&quot;To Private&quot;, &quot;ToPrivate&quot;, new { partitionKey = photo.PartitionKey, rowKey = photo.RowKey })<span style="color:#0000FF">&lt;/</span><span style="color:#800000">td</span><span style="color:#0000FF">&gt;</span></strong>
+<strong class="markLine">            }</strong>
+<strong class="markLine">        }</strong>
+<strong class="markLine">        else</strong>
+<strong class="markLine">        {</strong>
+<strong class="markLine">            <span style="color:#0000FF">&lt;</span><span style="color:#800000">td</span><span style="color:#0000FF">&gt;</span>@Html.ActionLink(&quot;To Public&quot;, &quot;ToPublic&quot;, new { partitionKey = photo.PartitionKey, rowKey = photo.RowKey })<span style="color:#0000FF">&lt;/</span><span style="color:#800000">td</span><span style="color:#0000FF">&gt;</span></strong>
+<strong class="markLine">        }      </strong>
+    <span style="color:#0000FF">&lt;/</span><span style="color:#800000">tr</span><span style="color:#0000FF">&gt;</span>
+}
+</code></pre></li>
+<li><p>Open the <em>Create.cshtml</em> file, located at the <em>Views/Home</em> folder.</p></li>
+<li><p>Add the following <strong>if</strong> statement before the <strong>input</strong> with type <strong>file</strong> element. This code adds a checkbox to upload the new photo as public if the user is authenticated. If it is not authenticated, the photo will be uploaded as public by default.</p>
+
+<p>(Code Snippet - <em>GettingStartedWindowsAzureStorage</em> - <em>Ex4-CreateViewUpdate</em>)</p>
+
+<!-- mark:5-14 -->
+
+<span class="codelanguage">HTML</span><pre><code class="HTML"><span style="color:#0000FF">&lt;</span><span style="color:#800000">div</span><span style="color:#0000FF">&gt;</span>
+    <span style="color:#0000FF">&lt;</span><span style="color:#800000">label</span><span style="color:#0000FF">&gt;</span>Image<span style="color:#0000FF">&lt;/</span><span style="color:#800000">label</span><span style="color:#0000FF">&gt;</span>
+    <span style="color:#0000FF">&lt;</span><span style="color:#800000">input</span> <span style="color:#FF0000">type</span>=<span style="color:#0000FF">&quot;file&quot;</span> <span style="color:#FF0000">name</span>=<span style="color:#0000FF">&quot;file&quot;</span> <span style="color:#FF0000">id</span>=<span style="color:#0000FF">&quot;file&quot;</span> <span style="color:#0000FF">/&gt;</span>
+<span style="color:#0000FF">&lt;/</span><span style="color:#800000">div</span><span style="color:#0000FF">&gt;</span>
+<strong class="markLine">if (this.User.Identity.IsAuthenticated){</strong>
+<strong class="markLine">    <span style="color:#0000FF">&lt;</span><span style="color:#800000">div</span><span style="color:#0000FF">&gt;</span></strong>
+<strong class="markLine">        @Html.CheckBox(&quot;Public&quot;, false)  Public</strong>
+<strong class="markLine">    <span style="color:#0000FF">&lt;/</span><span style="color:#800000">div</span><span style="color:#0000FF">&gt;</span></strong>
+<strong class="markLine">}</strong>
+<strong class="markLine">else {</strong>
+<strong class="markLine">    <span style="color:#0000FF">&lt;</span><span style="color:#800000">div</span><span style="color:#0000FF">&gt;</span></strong>
+<strong class="markLine">        @Html.CheckBox(&quot;Public&quot;, true, new { disabled = &quot;disabled&quot; })  Public</strong>
+<strong class="markLine">    <span style="color:#0000FF">&lt;/</span><span style="color:#800000">div</span><span style="color:#0000FF">&gt;</span></strong>
+<strong class="markLine">}</strong>
+<span style="color:#0000FF">&lt;</span><span style="color:#800000">input</span> <span style="color:#FF0000">type</span>=<span style="color:#0000FF">&quot;submit&quot;</span> <span style="color:#FF0000">value</span>=<span style="color:#0000FF">&quot;Create&quot;</span> <span style="color:#0000FF">/&gt;</span>
+</code></pre></li>
+<li><p>Run the solution by pressing <strong>F5</strong>.</p></li>
+<li><p>If you previously uploaded a photo, you will be able to see it listed; otherwise upload a new photo by clicking the <strong>Create</strong> link. The listed photos are public and can be seen by all application users, even if they are not authenticated.</p>
+
+<p><img src="Images/listing-public-photos.png?raw=true" alt="Listing all the public photos" title="Listing all the public photos">
+</p>
+
+<p><em>Listing all the public photos</em></p></li>
+<li><p>Log in to the application if you have already created a user, or else register a new one. After registration you will be automatically logged in.</p></li>
+<li><p>Upload a new photo after being logged in. Notice that you are able to see the public photos and the private ones.</p>
+
+<p><img src="Images/listing-all-photos.png?raw=true" alt="Listing public and private photos" title="Listing public and private photos">
+</p>
+
+<p><em>Listing public and private photos</em></p></li>
+<li><p>Click the <strong>Log off</strong> button to log off. The page will be refreshed and you will not be able to see the photos uploaded as private anymore.</p>
+
+<p><img src="Images/listing-public-photos.png?raw=true" alt="Private photos are not available when not authenticated" title="Private photos are not available when not authenticated">
+</p>
+
+<p><em>Private photos are not available when not authenticated</em></p>
+
+<p>This is because when you log in a SAS is created to allow you to read and write to that user partition key. When you are not logged you have a SAS that only grants permission over the &quot;Public&quot; partition key, allowing you to read and write rows in that partition key.</p></li>
+</ol>
+
+<p><a name="Ex4Task2"></a></p>
+
+<h4 id="Task_2_-_Adding_SAS_at_Blob_level">Task 2 - Adding SAS at Blob level</h4>
+
+<p>In this task you will learn how to create SAS for Azure Blobs. SAS can be created for blobs and for blobs containers. SAS tokens can be used on blogs to read, update and delete the specified blob. Regarding blob containers, SAS tokens can be used to list the content of the container, and to create, read, update and delete blobs in it.</p>
+
+<ol>
+<li><p>Open the <em>PhotoDataServiceContext.cs</em> file and add the following using.</p>
+
+<span class="codelanguage">C#</span><pre><code class="C#"><span style="color:#0000FF">using</span> Microsoft.WindowsAzure.Storage.Blob;
+<span style="color:#0000FF">using</span> System.Globalization;
+</code></pre></li>
+<li><p>Create a new method called <strong>GetSasForBlob</strong>. Paste the following code in the method's body.</p>
+
+<p>(Code Snippet - <em>GettingStartedWindowsAzureStorage</em> - <em>Ex4-GetSasForBlobMethod</em>)</p>
+
+<!-- mark:1-10 -->
+
+<span class="codelanguage">C#</span><pre><code class="C#"><strong class="markLine"><span style="color:#0000FF">public</span> <span style="color:#0000FF">string</span> GetSasForBlob(CloudBlockBlob blob, SharedAccessBlobPermissions permission)</strong>
+<strong class="markLine">{</strong>
+<strong class="markLine">    <span style="color:#0000FF">var</span> sas = blob.GetSharedAccessSignature(<span style="color:#0000FF">new</span> SharedAccessBlobPolicy()</strong>
+<strong class="markLine">        {</strong>
+<strong class="markLine">            Permissions = permission,</strong>
+<strong class="markLine">            SharedAccessStartTime = DateTime.UtcNow.AddMinutes(-5),</strong>
+<strong class="markLine">            SharedAccessExpiryTime = DateTime.UtcNow.AddMinutes(2),</strong>
+<strong class="markLine">        });</strong>
+<strong class="markLine">    <span style="color:#0000FF">return</span> <span style="color:#0000FF">string</span>.Format(CultureInfo.InvariantCulture, <span style="color:#8B0000">&quot;{0}{1}&quot;</span>, blob.Uri, sas);</strong>
+<strong class="markLine">}</strong>
+</code></pre>
+<blockquote>
+<p><strong>Note</strong>: This method takes a block blob reference and creates a Blob SAS for it, with the permissions passed as parameters. Finally, it returns the SAS in string format.</p>
+</blockquote></li>
+<li><p>Open the <em>Index.cshtml</em> located in the <em>Views\Home</em> folder, and add the following code, that adds the share link to private blobs, at the end of the <strong>else</strong> statement.</p>
+
+<p>(Code Snippet - <em>GettingStartedWindowsAzureStorage</em> - <em>Ex4-IndexViewUpdateWithShareLink</em>)</p>
+
+<!-- mark:11 -->
+
+<span class="codelanguage">HTML</span><pre><code class="HTML">    @if (photo.PartitionKey == &quot;Public&quot;)
+    {
+        if (this.User.Identity.IsAuthenticated)
+        {
+            <span style="color:#0000FF">&lt;</span><span style="color:#800000">td</span><span style="color:#0000FF">&gt;</span>@Html.ActionLink(&quot;To Private&quot;, &quot;ToPrivate&quot;, new { partitionKey = photo.PartitionKey, rowKey = photo.RowKey })<span style="color:#0000FF">&lt;/</span><span style="color:#800000">td</span><span style="color:#0000FF">&gt;</span>
+        }
+    }
+    else
+    {
+        <span style="color:#0000FF">&lt;</span><span style="color:#800000">td</span><span style="color:#0000FF">&gt;</span>@Html.ActionLink(&quot;To Public&quot;, &quot;ToPublic&quot;, new { partitionKey = photo.PartitionKey, rowKey = photo.RowKey })<span style="color:#0000FF">&lt;/</span><span style="color:#800000">td</span><span style="color:#0000FF">&gt;</span>
+<strong class="markLine">        <span style="color:#0000FF">&lt;</span><span style="color:#800000">td</span><span style="color:#0000FF">&gt;</span>@Html.ActionLink(&quot;Share&quot;, &quot;Share&quot;, new { partitionKey = photo.PartitionKey, rowKey = photo.RowKey })<span style="color:#0000FF">&lt;/</span><span style="color:#800000">td</span><span style="color:#0000FF">&gt;</span></strong>
+    }
+</code></pre>
+
+<p>Notice that the <strong>ActionLink</strong> is calling the Share action passing the partition and row keys as parameters.</p></li>
+<li><p>Open the <em>HomeController.cs</em> file, located in the <em>Controllers</em> folder.</p></li>
+<li><p>Create a new <strong>Share</strong> action in the <em>HomeController</em> class.</p>
+
+<p>(Code Snippet - <em>GettingStartedWindowsAzureStorage</em> - <em>Ex4-ShareAction</em>)</p>
+
+<!-- mark:1-26 -->
+
+<span class="codelanguage">C#</span><pre><code class="C#"><strong class="markLine">[HttpGet]</strong>
+<strong class="markLine"><span style="color:#0000FF">public</span> ActionResult Share(<span style="color:#0000FF">string</span> partitionKey, <span style="color:#0000FF">string</span> rowKey)</strong>
+<strong class="markLine">{</strong>
+<strong class="markLine">    <span style="color:#0000FF">var</span> cloudTableClient = <span style="color:#0000FF">new</span> CloudTableClient(<span style="color:#0000FF">this</span>.UriTable, <span style="color:#0000FF">new</span> StorageCredentials(<span style="color:#0000FF">this</span>.AuthenticatedTableSas));</strong>
+<strong class="markLine">    <span style="color:#0000FF">var</span> photoContext = <span style="color:#0000FF">new</span> PhotoDataServiceContext(cloudTableClient);</strong>
+<strong class="markLine"></strong>
+<strong class="markLine">    PhotoEntity photo = photoContext.GetById(partitionKey, rowKey);</strong>
+<strong class="markLine">    <span style="color:#0000FF">if</span> (photo == <span style="color:#0000FF">null</span>)</strong>
+<strong class="markLine">    {</strong>
+<strong class="markLine">        <span style="color:#0000FF">return</span> <span style="color:#0000FF">this</span>.HttpNotFound();</strong>
+<strong class="markLine">    }</strong>
+<strong class="markLine"></strong>
+<strong class="markLine">    <span style="color:#0000FF">string</span> sas = <span style="color:#0000FF">string</span>.Empty;</strong>
+<strong class="markLine">    <span style="color:#0000FF">if</span> (!<span style="color:#0000FF">string</span>.IsNullOrEmpty(photo.BlobReference))</strong>
+<strong class="markLine">    {</strong>
+<strong class="markLine">        CloudBlockBlob blobBlockReference = <span style="color:#0000FF">this</span>.GetBlobContainer().GetBlockBlobReference(photo.BlobReference);</strong>
+<strong class="markLine">        sas = photoContext.GetSasForBlob(blobBlockReference, SharedAccessBlobPermissions.Read);</strong>
+<strong class="markLine">    }</strong>
+<strong class="markLine"></strong>
+<strong class="markLine">    <span style="color:#0000FF">if</span> (!<span style="color:#0000FF">string</span>.IsNullOrEmpty(sas))</strong>
+<strong class="markLine">    {</strong>
+<strong class="markLine">        <span style="color:#0000FF">return</span> View(<span style="color:#8B0000">&quot;Share&quot;</span>, <span style="color:#0000FF">null</span>, sas);</strong>
+<strong class="markLine">    }</strong>
+<strong class="markLine"></strong>
+<strong class="markLine">    <span style="color:#0000FF">return</span> RedirectToAction(<span style="color:#8B0000">&quot;Index&quot;</span>);</strong>
+<strong class="markLine">}   </strong>
+</code></pre>
+
+<p>The preceding code gets the blob reference by using the partition and row keys, and calls the <strong>GetSasForBlob</strong> method passing the reference and the permissions as parameters. In this case, the SAS is created with <strong>Read</strong> permissions.</p></li>
+<li><p>You will now add the corresponding view to the previously created action. To do so, right click in the <strong>Home</strong> folder under <strong>Views</strong>, go to <strong>Add</strong> and select <strong>Existing Item...</strong>.</p></li>
+<li><p>Browse to the <strong>Assets/Ex4-IntroducingSAS</strong> folder, select the <strong>Share.cshtml</strong> view and click <strong>Add</strong>.</p></li>
+<li><p>Run the solution by pressing <strong>F5</strong>.</p></li>
+<li><p>Log into the application. If you do not have an user, register to create one.</p></li>
+<li><p>If you previously uploaded some images using the account you used for login you can use them, otherwise, upload an image using the logged account.</p></li>
+<li><p>Click the <strong>Share</strong> link, next to one of the uploaded photos. You will navigate to the <em>Share</em> page.</p>
+
+<p><img src="Images/sharing-a-blob-page.png?raw=true" alt="Generating a link to share a blob" title="Generating a link to share a blob">
+</p>
+
+<p><em>Generating a link to share a blob</em></p></li>
+<li><p>Copy the provided link, and open it in your browser. You will be able to see the image from your browser.</p>
+
+<p><img src="Images/opening-a-shared-blob.png?raw=true" alt="Opening a shared blob" title="Opening a shared blob">
+</p>
+
+<p><em>Opening a shared blob</em></p></li>
+<li><p>Wait two minutes (time it takes for this SAS token to expire) and press <strong>Ctrl+F5</strong>, as the token is no longer valid, you will not be able to see the image and an error will be displayed.</p>
+
+<p><img src="Images/opening-an-expired-share-link.png?raw=true" alt="Opening an expired share link" title="Opening an expired share link">
+</p>
+
+<p><em>Opening an expired share link</em></p></li>
+</ol>
+
+<p><a name="Ex4Task3"></a></p>
+
+<h4 id="Task_3_-_Adding_SAS_at_Queue_level">Task 3 - Adding SAS at Queue level</h4>
+
+<p>In this task you will use SAS at queue level to restrict access to the storage queues. SAS can enable Read, Add, Process, and Update permissions on the queue.</p>
+
+<ol>
+<li><p>In the <strong>QueueProcessor_WorkerRole</strong> project, open the <strong>WorkerRole</strong> class.</p></li>
+<li><p>At the top of the class add the following using statements.</p>
+
+<span class="codelanguage">C#</span><pre><code class="C#"><span style="color:#0000FF">using</span> Microsoft.WindowsAzure.Storage.Queue;
+<span style="color:#0000FF">using</span> Microsoft.WindowsAzure.Storage.Auth;
+</code></pre></li>
+<li><p>Add the following class variables at the start of the class, that contain a reference to the Queue Uri and to the expiration time of the queue SAS token. Keep in mind that you can replace the local storage uri, with your Azure Queue Storage URL.</p>
+
+<span class="codelanguage">C#</span><pre><code class="C#"><span style="color:#0000FF">private</span> DateTime serviceQueueSasExpiryTime;
+<span style="color:#0000FF">private</span> Uri uri = <span style="color:#0000FF">new</span> Uri(<span style="color:#8B0000">&quot;http://127.0.0.1:10001/devstoreaccount1&quot;</span>);
+</code></pre></li>
+<li><p>Create a new private method called <strong>GetQueueSas</strong>, and the following code in its body.</p>
+
+<p>(Code Snippet - <em>GettingStartedWindowsAzureStorage</em> - <em>Ex4-GetQueueSasUpdate</em>)</p>
+
+<!-- mark:1-13 -->
+
+<span class="codelanguage">C#</span><pre><code class="C#"><strong class="markLine"><span style="color:#0000FF">private</span> <span style="color:#0000FF">string</span> GetQueueSas()</strong>
+<strong class="markLine">{</strong>
+<strong class="markLine">    <span style="color:#0000FF">var</span> storageAccount = CloudStorageAccount.Parse(CloudConfigurationManager.GetSetting(<span style="color:#8B0000">&quot;StorageConnectionString&quot;</span>));</strong>
+<strong class="markLine">    <span style="color:#0000FF">var</span> client = storageAccount.CreateCloudQueueClient();</strong>
+<strong class="markLine">    <span style="color:#0000FF">var</span> queue = client.GetQueueReference(<span style="color:#8B0000">&quot;messagequeue&quot;</span>);</strong>
+<strong class="markLine">    queue.CreateIfNotExists();</strong>
+<strong class="markLine">    <span style="color:#0000FF">var</span> token = queue.GetSharedAccessSignature(</strong>
+<strong class="markLine">                <span style="color:#0000FF">new</span> SharedAccessQueuePolicy() { Permissions = SharedAccessQueuePermissions.ProcessMessages | SharedAccessQueuePermissions.Read | SharedAccessQueuePermissions.Add | SharedAccessQueuePermissions.Update, SharedAccessExpiryTime = DateTime.UtcNow.AddMinutes(15) },</strong>
+<strong class="markLine">                <span style="color:#0000FF">null</span>);</strong>
+<strong class="markLine"></strong>
+<strong class="markLine">    <span style="color:#0000FF">this</span>.serviceQueueSasExpiryTime = DateTime.UtcNow.AddMinutes(15);</strong>
+<strong class="markLine">    <span style="color:#0000FF">return</span> token;</strong>
+<strong class="markLine">}</strong>
+</code></pre>
+
+<p>This method gets a reference to the application's queue and generates a SAS token that has permissions to process, read, add, and update messages.</p></li>
+<li><p>Browse to the <strong>Run</strong> method and replace its body with the following code.</p>
+
+<p>(Code Snippet - <em>GettingStartedWindowsAzureStorage</em> - <em>Ex4-RunMethodUpdate</em>)</p>
+
+<!-- mark:3-26 -->
+
+<span class="codelanguage">C#</span><pre><code class="C#"><span style="color:#0000FF">public</span> <span style="color:#0000FF">override</span> <span style="color:#0000FF">void</span> Run()
+{
+<strong class="markLine">    Trace.TraceInformation(<span style="color:#8B0000">&quot;QueueProcessor_WorkerRole entry point called&quot;</span>, <span style="color:#8B0000">&quot;Information&quot;</span>);</strong>
+<strong class="markLine">    <span style="color:#0000FF">var</span> queueClient = <span style="color:#0000FF">new</span> CloudQueueClient(<span style="color:#0000FF">this</span>.uri, <span style="color:#0000FF">new</span> StorageCredentials(<span style="color:#0000FF">this</span>.GetQueueSas()));</strong>
+<strong class="markLine"></strong>
+<strong class="markLine">    <span style="color:#0000FF">var</span> queue = queueClient.GetQueueReference(<span style="color:#8B0000">&quot;messagequeue&quot;</span>);</strong>
+<strong class="markLine"></strong>
+<strong class="markLine">    <span style="color:#0000FF">while</span> (<span style="color:#0000FF">true</span>)</strong>
+<strong class="markLine">    {</strong>
+<strong class="markLine">        Thread.Sleep(10000);</strong>
+<strong class="markLine">        Trace.TraceInformation(<span style="color:#8B0000">&quot;Working&quot;</span>, <span style="color:#8B0000">&quot;Information&quot;</span>);</strong>
+<strong class="markLine"></strong>
+<strong class="markLine">        <span style="color:#0000FF">if</span> (DateTime.UtcNow.AddMinutes(1) &gt;= <span style="color:#0000FF">this</span>.serviceQueueSasExpiryTime)</strong>
+<strong class="markLine">        {</strong>
+<strong class="markLine">            queueClient = <span style="color:#0000FF">new</span> CloudQueueClient(<span style="color:#0000FF">this</span>.uri, <span style="color:#0000FF">new</span> StorageCredentials(<span style="color:#0000FF">this</span>.GetQueueSas()));</strong>
+<strong class="markLine">            queue = queueClient.GetQueueReference(<span style="color:#8B0000">&quot;messagequeue&quot;</span>);</strong>
+<strong class="markLine">        }</strong>
+<strong class="markLine"></strong>
+<strong class="markLine">        <span style="color:#0000FF">var</span> msg = queue.GetMessage();</strong>
+<strong class="markLine"></strong>
+<strong class="markLine">        <span style="color:#0000FF">if</span> (msg != <span style="color:#0000FF">null</span>)</strong>
+<strong class="markLine">        {</strong>
+<strong class="markLine">            Trace.TraceInformation(<span style="color:#0000FF">string</span>.Format(<span style="color:#8B0000">&quot;Message &#39;{0}&#39; processed.&quot;</span>, msg.AsString));</strong>
+<strong class="markLine">            queue.DeleteMessage(msg);</strong>
+<strong class="markLine">        }</strong>
+<strong class="markLine">    }</strong>
+}
+</code></pre></li>
+<li><p>Open the <strong>BaseController</strong> class located in the <em>Controllers</em> folder of the <strong>PhotoUploader_WebRole</strong> project and add the following directives.</p>
+
+<span class="codelanguage">C#</span><pre><code class="C#"><span style="color:#0000FF">using</span> Microsoft.WindowsAzure.Storage.Queue;
+</code></pre></li>
+<li><p>Add the following public properties to the <strong>BaseController</strong> class.</p>
+
+<span class="codelanguage">C#</span><pre><code class="C#"><span style="color:#0000FF">public</span> Uri UriQueue = <span style="color:#0000FF">new</span> Uri(<span style="color:#8B0000">&quot;http://127.0.0.1:10001/devstoreaccount1&quot;</span>);
+<span style="color:#0000FF">public</span> <span style="color:#0000FF">string</span> QueueSas { <span style="color:#0000FF">get</span>; <span style="color:#0000FF">set</span>; }
+</code></pre>
+<blockquote>
+<p><strong>Note</strong>: In order to work against Windows Azure, you should update the Uri queue with the one in azure.</p>
+</blockquote></li>
+<li><p>Replace the if structure in the <strong>OnActionExecuting</strong> method with the following code.</p>
+
+<p>(Code Snippet - <em>GettingStartedWindowsAzureStorage</em> - <em>Ex4-QueueSharedAccessSignature</em>)</p>
+
+<!-- mark:6-20 -->
+
+<span class="codelanguage">C#</span><pre><code class="C#"> <span style="color:#0000FF">protected</span> <span style="color:#0000FF">override</span> <span style="color:#0000FF">void</span> OnActionExecuting(ActionExecutingContext filterContext)
+    {
+        CloudTableClient cloudTableClientAdmin = <span style="color:#0000FF">this</span>.StorageAccount.CreateCloudTableClient();
+        <span style="color:#0000FF">var</span> photoContextAdmin = <span style="color:#0000FF">new</span> PhotoDataServiceContext(cloudTableClientAdmin);
+
+<strong class="markLine">        <span style="color:#0000FF">if</span> (<span style="color:#0000FF">this</span>.User.Identity.IsAuthenticated)</strong>
+<strong class="markLine">        {</strong>
+<strong class="markLine">            <span style="color:#0000FF">this</span>.AuthenticatedTableSas = photoContextAdmin.GetSas(<span style="color:#0000FF">this</span>.User.Identity.Name, SharedAccessTablePermissions.Add | SharedAccessTablePermissions.Delete | SharedAccessTablePermissions.Query | SharedAccessTablePermissions.Update);</strong>
+<strong class="markLine">            <span style="color:#0000FF">this</span>.PublicTableSas = photoContextAdmin.GetSas(<span style="color:#8B0000">&quot;Public&quot;</span>, SharedAccessTablePermissions.Add | SharedAccessTablePermissions.Delete | SharedAccessTablePermissions.Query | SharedAccessTablePermissions.Update);</strong>
+<strong class="markLine">            <span style="color:#0000FF">this</span>.QueueSas = <span style="color:#0000FF">this</span>.StorageAccount.CreateCloudQueueClient().GetQueueReference(<span style="color:#8B0000">&quot;messagequeue&quot;</span>).GetSharedAccessSignature(</strong>
+<strong class="markLine">               <span style="color:#0000FF">new</span> SharedAccessQueuePolicy() { Permissions = SharedAccessQueuePermissions.Add | SharedAccessQueuePermissions.Read, SharedAccessExpiryTime = DateTime.UtcNow.AddMinutes(15) },</strong>
+<strong class="markLine">               <span style="color:#0000FF">null</span></strong>
+<strong class="markLine">               );</strong>
+<strong class="markLine">        }</strong>
+<strong class="markLine">        <span style="color:#0000FF">else</span></strong>
+<strong class="markLine">        {</strong>
+<strong class="markLine">            <span style="color:#0000FF">this</span>.PublicTableSas = photoContextAdmin.GetSas(<span style="color:#8B0000">&quot;Public&quot;</span>, SharedAccessTablePermissions.Add | SharedAccessTablePermissions.Update | SharedAccessTablePermissions.Query);</strong>
+<strong class="markLine">            <span style="color:#0000FF">this</span>.AuthenticatedTableSas = <span style="color:#0000FF">null</span>;</strong>
+<strong class="markLine">            <span style="color:#0000FF">this</span>.QueueSas = <span style="color:#0000FF">null</span>;</strong>
+<strong class="markLine">        }</strong>
+    }
+</code></pre></li>
+<li><p>Open the <strong>HomeController</strong>, locate the <strong>GetCloudQueue</strong> method and replace the code with the following snippet.</p>
+
+<p>(Code Snippet - <em>GettingStartedWindowsAzureStorage</em> - <em>Ex4-GetCloudQueueMethod</em>)</p>
+
+<!-- mark:3-6 -->
+
+<span class="codelanguage">C#</span><pre><code class="C#"><span style="color:#0000FF">private</span> CloudQueue GetCloudQueue()
+{
+<strong class="markLine">    <span style="color:#0000FF">var</span> queueClient = <span style="color:#0000FF">new</span> CloudQueueClient(<span style="color:#0000FF">this</span>.UriQueue, <span style="color:#0000FF">new</span> StorageCredentials(<span style="color:#0000FF">this</span>.QueueSas));</strong>
+<strong class="markLine">    <span style="color:#0000FF">var</span> queue = queueClient.GetQueueReference(<span style="color:#8B0000">&quot;messagequeue&quot;</span>);</strong>
+<strong class="markLine">    queue.CreateIfNotExists();</strong>
+<strong class="markLine">    <span style="color:#0000FF">return</span> queue;</strong>
+}
+</code></pre>
+
+<p>This code creates an instance of the <strong>CloudQueueClient</strong> class for the specified queue, using the created SAS, and then returns that instance.</p></li>
+<li><p>Press <strong>F5</strong> to run the application. Once the browser is opened, upload a new image.</p></li>
+<li><p>Open the <strong>Compute Emulator</strong>. To do so, right-click the Windows Azure icon tray and select <strong>Show Compute Emulator UI</strong>.</p>
+
+<p><img src="Images/windows-azure-tray-icon.png?raw=true" alt="Windows Azure Tray Icon" title="Windows Azure Tray Icon">
+</p>
+
+<p><em>Windows Azure Tray Icon</em></p></li>
+<li><p>Select the worker role instance. Wait until the process reads the message from the queue, you should not see any messsages, because as an anonymous user you do not have permissions to add messages to the queue.</p>
+
+<p><img src="Images/queue-receives-no-notification.png?raw=true" alt="The queue receives no messages due to insufficient permissions" title="The queue receives no messages due to insufficient permissions">
+</p>
+
+<p><em>The queue receives no messages due to insufficient permissions</em></p></li>
+<li><p>Log in the application, and upload a new photo. Wait until the process reads the message from the queue and shows the <em>&quot;Photo uploaded&quot;</em> message. As a logged user, you have a SAS with permissions to add messages to the queue.</p>
+
+<p><img src="Images/logged-user-can-add-messages-to-the-queue.png?raw=true" alt="As a logged user, messages will be added to the queue" title="As a logged user, messages will be added to the queue">
+</p>
+
+<p><em>As a logged user, messages will be added to the queue</em></p>
+<blockquote>
+<p><strong>Note:</strong> The create method will always try to add the message to the queue. However, when the user is not authenticated, its SAS does not have sufficient permissions to add messages to the message queue.</p>
+</blockquote></li>
+</ol>
+
+<p><a name="Exercise5"></a></p>
+
+<h3 id="Exercise_5_Updating_SAS_to_use_Stored_Access_Policies">Exercise 5: Updating SAS to use Stored Access Policies</h3>
+
+<p>A stored access policy provides an additional level of control over Shared Access Signatures on the server side. Establishing a stored access policy serves to group Shared Access Signatures and to provide additional restrictions for signatures that are bound by the policy. You can use a stored access policy to change the start time, expiry time, or permissions for a signature, or to revoke it after it has been issued.</p>
+
+<p>A stored access policy gives you greater control over Shared Access Signatures you have released. Instead of specifying the signature's lifetime and permissions on the URL, you can specify these parameters within the stored access policy stored on the blob, container, queue, or table that is being shared. To change these parameters for one or more signatures, you can modify the stored access policy, rather than reissuing the signatures. You can also quickly revoke the signature by modifying the stored access policy.</p>
+
+<p><a name="Ex5Task1"></a></p>
+
+<h4 id="Task_1_-_Updating_table_security_to_use_stored_access_policy">Task 1 - Updating table security to use stored access policy</h4>
+
+<p>In this task you will update table security to use stored access signature.</p>
+
+<ol>
+<li><p>Open the begin solution as administrator from <strong>\Source\Ex5-UpdatingSecurityStoredAccessSignature</strong> </p>
+<blockquote>
+<p><strong>Note</strong>: If you have completed exercise 4, you can continue working with that solution.</p>
+</blockquote></li>
+<li><p>Update <strong>Global.asax.cs</strong> to set the stored access policies for table storage.</p>
+
+<p>(Code Snippet - <em>GettingStartedWindowsAzureStorage</em> - <em>Ex5-TableStorageStoredAccessPoliciesTables</em>)</p>
+
+<!-- mark:7-12 -->
+
+<span class="codelanguage">C#</span><pre><code class="C#"><span style="color:#0000FF">protected</span> <span style="color:#0000FF">void</span> Application_Start()
+{
+    ...
+    CloudTable table = cloudTableClient.GetTableReference(<span style="color:#8B0000">&quot;Photos&quot;</span>);
+    table.CreateIfNotExists();
+
+<strong class="markLine">    TablePermissions tp = <span style="color:#0000FF">new</span> TablePermissions();</strong>
+<strong class="markLine">    tp.SharedAccessPolicies.Add(<span style="color:#8B0000">&quot;readonly&quot;</span>, <span style="color:#0000FF">new</span> SharedAccessTablePolicy { Permissions = SharedAccessTablePermissions.Query, SharedAccessExpiryTime =  System.DateTime.UtcNow.AddMinutes(15) });</strong>
+<strong class="markLine">    tp.SharedAccessPolicies.Add(<span style="color:#8B0000">&quot;edit&quot;</span>, <span style="color:#0000FF">new</span> SharedAccessTablePolicy { Permissions = SharedAccessTablePermissions.Query | SharedAccessTablePermissions.Add | SharedAccessTablePermissions.Update, SharedAccessExpiryTime =  System.DateTime.UtcNow.AddMinutes(15) });</strong>
+<strong class="markLine">    tp.SharedAccessPolicies.Add(<span style="color:#8B0000">&quot;admin&quot;</span>, <span style="color:#0000FF">new</span> SharedAccessTablePolicy { Permissions = SharedAccessTablePermissions.Query | SharedAccessTablePermissions.Add | SharedAccessTablePermissions.Update | SharedAccessTablePermissions.Delete, SharedAccessExpiryTime =  System.DateTime.UtcNow.AddMinutes(15) });</strong>
+<strong class="markLine">    tp.SharedAccessPolicies.Add(<span style="color:#8B0000">&quot;none&quot;</span>, <span style="color:#0000FF">new</span> SharedAccessTablePolicy { Permissions = SharedAccessTablePermissions.None, SharedAccessExpiryTime =  System.DateTime.UtcNow.AddMinutes(15) });</strong>
+<strong class="markLine">    table.SetPermissions(tp);</strong>
+}
+</code></pre></li>
+<li><p>Open the <strong>PhotoDataServiceContext.cs</strong> class and replace the <em>GetSas</em> method with the following code.</p>
+
+<p>(Code Snippet - <em>GettingStartedWindowsAzureStorage</em> - <em>Ex5-GetSasImplementation</em>)</p>
+
+<!-- mark:5-16 -->
+
+<span class="codelanguage">C#</span><pre><code class="C#"> <span style="color:#0000FF">public</span> <span style="color:#0000FF">class</span> PhotoDataServiceContext : TableServiceContext
+ {
+    ...
+
+<strong class="markLine">     <span style="color:#0000FF">public</span> <span style="color:#0000FF">string</span> GetSas(<span style="color:#0000FF">string</span> partition, <span style="color:#0000FF">string</span> policyName)</strong>
+<strong class="markLine">     {</strong>
+<strong class="markLine">        <span style="color:#0000FF">string</span> sasToken = <span style="color:#0000FF">this</span>.ServiceClient.GetTableReference(<span style="color:#8B0000">&quot;Photos&quot;</span>).GetSharedAccessSignature(</strong>
+<strong class="markLine">             <span style="color:#0000FF">new</span> SharedAccessTablePolicy()   <span style="color:#008000">/* access policy */</span>,</strong>
+<strong class="markLine">             policyName <span style="color:#008000">/* access policy identifier */</span>,</strong>
+<strong class="markLine">             partition <span style="color:#008000">/* start partition key */</span>,</strong>
+<strong class="markLine">             <span style="color:#0000FF">null</span>     <span style="color:#008000">/* start row key */</span>,</strong>
+<strong class="markLine">             partition <span style="color:#008000">/* end partition key */</span>,</strong>
+<strong class="markLine">             <span style="color:#0000FF">null</span>     <span style="color:#008000">/* end row key */</span>);</strong>
+<strong class="markLine"></strong>
+<strong class="markLine">        <span style="color:#0000FF">return</span> sasToken;</strong>
+<strong class="markLine">     }</strong>
+ }
+</code></pre></li>
+<li><p>Open the <strong>BaseController.cs</strong> class and update the <em>OnActionExecuting</em> method with the new <em>GetSas</em> method implementation. To do so, replace the <strong>if</strong> structure code with the following snippet.</p>
+
+<p>(Code Snippet - <em>GettingStartedWindowsAzureStorage</em> - <em>Ex5-GetTableSasOnActionExecuting</em>)</p>
+
+<!-- mark:5-19 -->
+
+<span class="codelanguage">C#</span><pre><code class="C#"><span style="color:#0000FF">protected</span> <span style="color:#0000FF">override</span> <span style="color:#0000FF">void</span> OnActionExecuting(ActionExecutingContext filterContext)
+{
+    ...
+
+<strong class="markLine">    <span style="color:#0000FF">if</span> (<span style="color:#0000FF">this</span>.User.Identity.IsAuthenticated)</strong>
+<strong class="markLine">    {</strong>
+<strong class="markLine">         <span style="color:#0000FF">this</span>.AuthenticatedTableSas = photoContextAdmin.GetSas(<span style="color:#0000FF">this</span>.User.Identity.Name, <span style="color:#8B0000">&quot;admin&quot;</span>);</strong>
+<strong class="markLine">         <span style="color:#0000FF">this</span>.PublicTableSas = photoContextAdmin.GetSas(<span style="color:#8B0000">&quot;Public&quot;</span>, <span style="color:#8B0000">&quot;admin&quot;</span>);</strong>
+<strong class="markLine">         <span style="color:#0000FF">this</span>.QueueSas = <span style="color:#0000FF">this</span>.StorageAccount.CreateCloudQueueClient().GetQueueReference(<span style="color:#8B0000">&quot;messagequeue&quot;</span>).GetSharedAccessSignature(</strong>
+<strong class="markLine">             <span style="color:#0000FF">new</span> SharedAccessQueuePolicy() { Permissions = SharedAccessQueuePermissions.Add | SharedAccessQueuePermissions.Read, SharedAccessExpiryTime = DateTime.UtcNow.AddMinutes(15) },</strong>
+<strong class="markLine">             <span style="color:#0000FF">null</span></strong>
+<strong class="markLine">             );</strong>
+<strong class="markLine">    }</strong>
+<strong class="markLine">    <span style="color:#0000FF">else</span></strong>
+<strong class="markLine">    {</strong>
+<strong class="markLine">         <span style="color:#0000FF">this</span>.PublicTableSas = photoContextAdmin.GetSas(<span style="color:#8B0000">&quot;Public&quot;</span>, <span style="color:#8B0000">&quot;edit&quot;</span>);</strong>
+<strong class="markLine">         <span style="color:#0000FF">this</span>.AuthenticatedTableSas = <span style="color:#0000FF">null</span>;</strong>
+<strong class="markLine">         <span style="color:#0000FF">this</span>.QueueSas = <span style="color:#0000FF">null</span>;</strong>
+<strong class="markLine">    }</strong>
+    ...
+}
+</code></pre>
+<blockquote>
+<p><strong>Note</strong>: Replace the <em><a href="http://127.0.0.1:10002/devstoreaccount1">http://127.0.0.1:10002/devstoreaccount1</a></em> with your storage account table URI in order to work against Windows Azure if not already replaced.</p>
+</blockquote></li>
+</ol>
+
+<p><a name="Ex5Task2"></a></p>
+
+<h4 id="Task_2_-_Updating_blob_security_to_use_stored_access_policy">Task 2 - Updating blob security to use stored access policy</h4>
+
+<ol>
+<li><p>Open the <strong>Global.asax.cs</strong> class and add the following using statement.</p>
+
+<span class="codelanguage">C#</span><pre><code class="C#"><span style="color:#0000FF">using</span> Microsoft.WindowsAzure.Storage.Blob;
+</code></pre></li>
+<li><p>Scroll down to the <strong>Application_Start</strong> method and set the stored access policies for blob storage. To do so, add the following code at the end of the method.</p>
+
+<p>(Code Snippet - <em>GettingStartedWindowsAzureStorage</em> - <em>Ex5-BlobStorageStoredAccessPolicy</em>)</p>
+
+<!-- mark:5-9 -->
+
+<span class="codelanguage">C#</span><pre><code class="C#"><span style="color:#0000FF">protected</span> <span style="color:#0000FF">void</span> Application_Start()
+{
+    ...
+
+<strong class="markLine">    CloudBlobContainer blob = storageAccount.CreateCloudBlobClient().GetContainerReference(CloudConfigurationManager.GetSetting(<span style="color:#8B0000">&quot;ContainerName&quot;</span>));</strong>
+<strong class="markLine">    BlobContainerPermissions bp = <span style="color:#0000FF">new</span> BlobContainerPermissions();</strong>
+<strong class="markLine"></strong>
+<strong class="markLine">    bp.SharedAccessPolicies.Add(<span style="color:#8B0000">&quot;read&quot;</span>, <span style="color:#0000FF">new</span> SharedAccessBlobPolicy { Permissions = SharedAccessBlobPermissions.Read, SharedAccessExpiryTime = System.DateTime.UtcNow.AddMinutes(60) });</strong>
+<strong class="markLine">    blob.SetPermissions(bp);</strong>
+}
+</code></pre>
+<blockquote>
+<p><strong>Note</strong>: Replace the <em><a href="http://127.0.0.1:10002/devstoreaccount1">http://127.0.0.1:10002/devstoreaccount1</a></em> with your storage account table URI in order to work against Windows Azure if not already replaced.</p>
+</blockquote></li>
+<li><p>Open the <strong>PhotoDataServiceContext.cs</strong> class and replace the <em>GetSasForBlob</em> method with the following implementation.</p>
+
+<p>(Code Snippet - <em>GettingStartedWindowsAzureStorage</em> - <em>Ex5-GetSasForBlobWithStoredAccessPolicy</em>)</p>
+
+<!-- mark:1-5 -->
+
+<span class="codelanguage">C#</span><pre><code class="C#"><strong class="markLine"><span style="color:#0000FF">public</span> <span style="color:#0000FF">string</span> GetSaSForBlob(CloudBlockBlob blob, <span style="color:#0000FF">string</span> policyId)</strong>
+<strong class="markLine">{</strong>
+<strong class="markLine">    <span style="color:#0000FF">var</span> sas = blob.GetSharedAccessSignature(<span style="color:#0000FF">new</span> SharedAccessBlobPolicy(), policyId);</strong>
+<strong class="markLine">    <span style="color:#0000FF">return</span> <span style="color:#0000FF">string</span>.Format(CultureInfo.InvariantCulture, <span style="color:#8B0000">&quot;{0}{1}&quot;</span>, blob.Uri, sas);</strong>
+<strong class="markLine">}</strong>
+
+</code></pre></li>
+<li><p>Open the <strong>HomeController.cs</strong> class and scroll down to the <em>Share</em> method. Replace the <em>GetSasForBlob</em> method call with the new implementation.</p>
+
+<p>(Code Snippet - <em>GettingStartedWindowsAzureStorage</em> - <em>Ex5-ShareActionWithStoredAccessPolicy</em>)</p>
+
+<!-- mark:10 -->
+
+<span class="codelanguage">C#</span><pre><code class="C#">[HttpGet]
+<span style="color:#0000FF">public</span> ActionResult Share(<span style="color:#0000FF">string</span> partitionKey, <span style="color:#0000FF">string</span> rowKey)
+{
+    ...
+
+    <span style="color:#0000FF">string</span> sas = <span style="color:#0000FF">string</span>.Empty;
+    <span style="color:#0000FF">if</span> (!<span style="color:#0000FF">string</span>.IsNullOrEmpty(photo.BlobReference))
+    {
+         CloudBlockBlob blobBlockReference = <span style="color:#0000FF">this</span>.GetBlobContainer().GetBlockBlobReference(photo.BlobReference);
+<strong class="markLine">         sas = photoContext.GetSaSForBlob(blobBlockReference, <span style="color:#8B0000">&quot;read&quot;</span>);</strong>
+    }
+
+    <span style="color:#0000FF">if</span> (!<span style="color:#0000FF">string</span>.IsNullOrEmpty(sas))
+    {
+         <span style="color:#0000FF">return</span> View(<span style="color:#8B0000">&quot;Share&quot;</span>, <span style="color:#0000FF">null</span>, sas);
+    }
+
+    <span style="color:#0000FF">return</span> RedirectToAction(<span style="color:#8B0000">&quot;Index&quot;</span>);
+}
+</code></pre></li>
+<li><p>Update the <strong>HomeController</strong>'s <strong>Create</strong> method to call the new <strong>GetSasForBlob</strong> implementation. You will also add some properties and metadata to the blob file in order to check them in the worker role later.</p>
+
+<p>(Code Snippet - <em>GettingStartedWindowsAzureStorage</em> - <em>Ex5-CreateActionWithPropertiesAndMetadata</em>)</p>
+
+<!-- mark:4-57 -->
+
+<span class="codelanguage">C#</span><pre><code class="C#">[HttpPost]
+<span style="color:#0000FF">public</span> ActionResult Create(PhotoViewModel photoViewModel, HttpPostedFileBase file, <span style="color:#0000FF">bool</span> Public, FormCollection collection)
+{
+<strong class="markLine">    <span style="color:#0000FF">if</span> (<span style="color:#0000FF">this</span>.ModelState.IsValid)</strong>
+<strong class="markLine">    {</strong>
+<strong class="markLine">        photoViewModel.PartitionKey = Public ? <span style="color:#8B0000">&quot;Public&quot;</span> : <span style="color:#0000FF">this</span>.User.Identity.Name;</strong>
+<strong class="markLine">        <span style="color:#0000FF">var</span> photo = <span style="color:#0000FF">this</span>.FromViewModel(photoViewModel);</strong>
+<strong class="markLine"></strong>
+<strong class="markLine">        <span style="color:#0000FF">if</span> (file != <span style="color:#0000FF">null</span>)</strong>
+<strong class="markLine">        {</strong>
+<strong class="markLine">            <span style="color:#008000">//Save file stream to Blob Storage</span></strong>
+<strong class="markLine">            <span style="color:#0000FF">var</span> blob = <span style="color:#0000FF">this</span>.GetBlobContainer().GetBlockBlobReference(file.FileName);</strong>
+<strong class="markLine">            blob.Properties.ContentType = file.ContentType;</strong>
+<strong class="markLine">            <span style="color:#0000FF">var</span> image = <span style="color:#0000FF">new</span> System.Drawing.Bitmap(file.InputStream);</strong>
+<strong class="markLine">            <span style="color:#0000FF">if</span> (image != <span style="color:#0000FF">null</span>)</strong>
+<strong class="markLine">            {</strong>
+<strong class="markLine">                blob.Metadata.Add(<span style="color:#8B0000">&quot;Width&quot;</span>, image.Width.ToString());</strong>
+<strong class="markLine">                blob.Metadata.Add(<span style="color:#8B0000">&quot;Height&quot;</span>, image.Height.ToString());</strong>
+<strong class="markLine">            }</strong>
+<strong class="markLine"></strong>
+<strong class="markLine">            blob.UploadFromStream(file.InputStream);</strong>
+<strong class="markLine">            photo.BlobReference = file.FileName;</strong>
+<strong class="markLine">        }</strong>
+<strong class="markLine">        <span style="color:#0000FF">else</span></strong>
+<strong class="markLine">        {</strong>
+<strong class="markLine">            <span style="color:#0000FF">this</span>.ModelState.AddModelError(<span style="color:#8B0000">&quot;File&quot;</span>, <span style="color:#0000FF">new</span> ArgumentNullException(<span style="color:#8B0000">&quot;file&quot;</span>));</strong>
+<strong class="markLine">            <span style="color:#0000FF">return</span> <span style="color:#0000FF">this</span>.View(photoViewModel);</strong>
+<strong class="markLine">        }</strong>
+<strong class="markLine"></strong>
+<strong class="markLine">        <span style="color:#008000">//Save information to Table Storage</span></strong>
+<strong class="markLine">        <span style="color:#0000FF">var</span> token = Public ? <span style="color:#0000FF">this</span>.PublicTableSas : <span style="color:#0000FF">this</span>.AuthenticatedTableSas;</strong>
+<strong class="markLine">        <span style="color:#0000FF">if</span> (!<span style="color:#0000FF">this</span>.User.Identity.IsAuthenticated)</strong>
+<strong class="markLine">        {</strong>
+<strong class="markLine">            token = <span style="color:#0000FF">this</span>.PublicTableSas;</strong>
+<strong class="markLine">            photo.PartitionKey = <span style="color:#8B0000">&quot;Public&quot;</span>;</strong>
+<strong class="markLine">        }</strong>
+<strong class="markLine"></strong>
+<strong class="markLine">        CloudTableClient cloudTableClient = <span style="color:#0000FF">new</span> CloudTableClient(<span style="color:#0000FF">this</span>.UriTable, <span style="color:#0000FF">new</span> StorageCredentials(token));</strong>
+<strong class="markLine">        <span style="color:#0000FF">var</span> photoContext = <span style="color:#0000FF">new</span> PhotoDataServiceContext(cloudTableClient);</strong>
+<strong class="markLine"></strong>
+<strong class="markLine">        photoContext.AddPhoto(photo);</strong>
+<strong class="markLine"></strong>
+<strong class="markLine">         <span style="color:#0000FF">try</span></strong>
+<strong class="markLine">         {</strong>
+<strong class="markLine">              <span style="color:#008000">//Send create notification</span></strong>
+<strong class="markLine">              <span style="color:#0000FF">var</span> msg = <span style="color:#0000FF">new</span> CloudQueueMessage(<span style="color:#0000FF">string</span>.Format(<span style="color:#8B0000">&quot;Photo Uploaded,{0}&quot;</span>, photo.BlobReference));</strong>
+<strong class="markLine">              <span style="color:#0000FF">this</span>.GetCloudQueue().AddMessage(msg);</strong>
+<strong class="markLine">         }</strong>
+<strong class="markLine">         <span style="color:#0000FF">catch</span> (Exception e)</strong>
+<strong class="markLine">         {</strong>
+<strong class="markLine">              System.Diagnostics.Trace.TraceInformation(<span style="color:#8B0000">&quot;Error&quot;</span>, <span style="color:#8B0000">&quot;Couldn&#39;t send notification&quot;</span>);</strong>
+<strong class="markLine">         }</strong>
+<strong class="markLine"></strong>
+<strong class="markLine">        <span style="color:#0000FF">return</span> <span style="color:#0000FF">this</span>.RedirectToAction(<span style="color:#8B0000">&quot;Index&quot;</span>);</strong>
+<strong class="markLine">    }</strong>
+<strong class="markLine"></strong>
+<strong class="markLine">    <span style="color:#0000FF">return</span> <span style="color:#0000FF">this</span>.View();</strong>
+}
+</code></pre></li>
+</ol>
+
+<p><a name="Ex5Task3"></a></p>
+
+<h4 id="Task_3_-_Updating_queue_security_to_use_stored_access_policies">Task 3 - Updating queue security to use stored access policies</h4>
+
+<ol>
+<li><p>Open the <strong>Global.asax.cs</strong> file and add the following using statements.</p>
+
+<span class="codelanguage">C#</span><pre><code class="C#"><span style="color:#0000FF">using</span> Microsoft.WindowsAzure.Storage.Queue;
+<span style="color:#0000FF">using</span> Microsoft.WindowsAzure.Storage.Queue.Protocol;
+</code></pre></li>
+<li><p>Update the <strong>Application_Start</strong> method to set the stored access policies for queues storage. You will also add a new metadata called <strong>resize</strong> and set it to <em>true</em>.</p>
+
+<p>(Code Snippet - <em>GettingStartedWindowsAzureStorage</em> - <em>Ex5-QueueStorageWithStoredAccessPolicy</em>)</p>
+
+<!-- mark:5-13 -->
+
+<span class="codelanguage">C#</span><pre><code class="C#"><span style="color:#0000FF">protected</span> <span style="color:#0000FF">void</span> Application_Start()
+{
+    ...
+
+<strong class="markLine">    CloudQueue queue = storageAccount.CreateCloudQueueClient().GetQueueReference(<span style="color:#8B0000">&quot;messagequeue&quot;</span>);</strong>
+<strong class="markLine">    queue.CreateIfNotExists();</strong>
+<strong class="markLine">    QueuePermissions qp = <span style="color:#0000FF">new</span> QueuePermissions();</strong>
+<strong class="markLine">    qp.SharedAccessPolicies.Add(<span style="color:#8B0000">&quot;add&quot;</span>, <span style="color:#0000FF">new</span> SharedAccessQueuePolicy { Permissions = SharedAccessQueuePermissions.Add | SharedAccessQueuePermissions.Read, SharedAccessExpiryTime = System.DateTime.UtcNow.AddMinutes(15)});</strong>
+<strong class="markLine">    qp.SharedAccessPolicies.Add(<span style="color:#8B0000">&quot;process&quot;</span>, <span style="color:#0000FF">new</span> SharedAccessQueuePolicy { Permissions = SharedAccessQueuePermissions.ProcessMessages | SharedAccessQueuePermissions.Read, SharedAccessExpiryTime = System.DateTime.UtcNow.AddMinutes(15) });</strong>
+<strong class="markLine">    queue.SetPermissions(qp);</strong>
+<strong class="markLine"></strong>
+<strong class="markLine">    queue.Metadata.Add(<span style="color:#8B0000">&quot;Resize&quot;</span>, <span style="color:#8B0000">&quot;true&quot;</span>);</strong>
+<strong class="markLine">    queue.SetMetadata();</strong>
+
+}
+</code></pre>
+<blockquote>
+<p><strong>Note</strong>: Replace the <em><a href="http://127.0.0.1:10002/devstoreaccount1">http://127.0.0.1:10002/devstoreaccount1</a></em> with your storage account table URI in order to work against Windows Azure if not already replaced.</p>
+</blockquote></li>
+<li><p>Open the <strong>BaseController.cs</strong> class and locate the <em>OnActionExecuting</em> method. Replace the <em>GetSharedAccessSignature</em> method for queues with the following code.</p>
+
+<p>(Code Snippet - <em>GettingStartedWindowsAzureStorage</em> - <em>Ex5-GetQueueSasWithStoredAccessPolicy</em>)</p>
+
+<!-- mark:5-7 -->
+
+<span class="codelanguage">C#</span><pre><code class="C#"><span style="color:#0000FF">protected</span> <span style="color:#0000FF">override</span> <span style="color:#0000FF">void</span> OnActionExecuting(ActionExecutingContext filterContext)
+{
+    ...
+
+<strong class="markLine">    <span style="color:#0000FF">this</span>.QueueSas = <span style="color:#0000FF">this</span>.StorageAccount.CreateCloudQueueClient().GetQueueReference(<span style="color:#8B0000">&quot;messagequeue&quot;</span>).GetSharedAccessSignature(</strong>
+<strong class="markLine">                                <span style="color:#0000FF">new</span> SharedAccessQueuePolicy() { },</strong>
+<strong class="markLine">                                <span style="color:#8B0000">&quot;add&quot;</span>);</strong>
+}
+</code></pre></li>
+<li><p>On the <strong>QueueProcessor_WorkerRole</strong> project, open the <strong>WorkerRole.cs</strong> class.</p></li>
+<li><p>Add the following using statements.</p>
+
+<span class="codelanguage">C#</span><pre><code class="C#"><span style="color:#0000FF">using</span> Microsoft.WindowsAzure.Storage.Blob;
+<span style="color:#0000FF">using</span> Microsoft.WindowsAzure.Storage.Queue.Protocol;
+</code></pre></li>
+<li><p>Add the following member to the <strong>WorkerRole</strong> class to store the <em>CloudBlobContainer</em></p>
+
+<span class="codelanguage">C#</span><pre><code class="C#"><span style="color:#0000FF">private</span> CloudBlobContainer container;
+</code></pre></li>
+<li><p>Create a new method called <strong>CreateCloudBlobClient</strong> in order to create the set the container variable. To do so, insert the following code.</p>
+
+<p>(Code Snippet - <em>GettingStartedWindowsAzureStorage</em> - <em>Ex5-CreateCloudBlobClientImplementation</em>)</p>
+
+<!-- mark:1-7 -->
+
+<span class="codelanguage">C#</span><pre><code class="C#"><strong class="markLine"><span style="color:#0000FF">private</span> <span style="color:#0000FF">void</span> CreateCloudBlobClient()</strong>
+<strong class="markLine">{</strong>
+<strong class="markLine">    <span style="color:#0000FF">var</span> storageAccount = CloudStorageAccount.Parse(CloudConfigurationManager.GetSetting(<span style="color:#8B0000">&quot;StorageConnectionString&quot;</span>));</strong>
+<strong class="markLine"></strong>
+<strong class="markLine">    CloudBlobClient blobStorage = storageAccount.CreateCloudBlobClient();</strong>
+<strong class="markLine">    <span style="color:#0000FF">this</span>.container = blobStorage.GetContainerReference(CloudConfigurationManager.GetSetting(<span style="color:#8B0000">&quot;ContainerName&quot;</span>));</strong>
+<strong class="markLine">}</strong>
+</code></pre></li>
+<li><p>In the <strong>OnStart</strong> method, call the <strong>CreateCloudBlobClient</strong> method you have recently created.</p>
+
+<p>(Code Snippet - <em>GettingStartedWindowsAzureStorage</em> - <em>Ex5-CreateCloudBlobClientCall</em>)</p>
+
+<!-- mark:5 -->
+
+<span class="codelanguage">C#</span><pre><code class="C#"><span style="color:#0000FF">public</span> <span style="color:#0000FF">override</span> <span style="color:#0000FF">bool</span> OnStart()
+{
+    ...
+
+<strong class="markLine">    <span style="color:#0000FF">this</span>.CreateCloudBlobClient();</strong>
+
+    <span style="color:#0000FF">return</span> <span style="color:#0000FF">base</span>.OnStart();
+}
+</code></pre></li>
+<li><p>Scroll down to the <strong>GetQueueSas</strong> method. Replace the <strong>GetSharedAccessignature</strong> method with the following code.</p>
+
+<p>(Code Snippet - <em>GettingStartedWindowsAzureStorage</em> - <em>Ex5-QueueSharedAccessSignatureWithStoredAccessPolicyInWorkerRole</em>)</p>
+
+<!-- mark:8-14 -->
+
+<span class="codelanguage">C#</span><pre><code class="C#"><span style="color:#0000FF">private</span> <span style="color:#0000FF">string</span> GetQueueSas()
+{
+    <span style="color:#0000FF">var</span> storageAccount = CloudStorageAccount.Parse(CloudConfigurationManager.GetSetting(<span style="color:#8B0000">&quot;StorageConnectionString&quot;</span>));
+    <span style="color:#0000FF">var</span> client = storageAccount.CreateCloudQueueClient();
+    <span style="color:#0000FF">var</span> queue = client.GetQueueReference(<span style="color:#8B0000">&quot;messagequeue&quot;</span>);
+    queue.CreateIfNotExists();
+
+<strong class="markLine">    QueuePermissions qp = <span style="color:#0000FF">new</span> QueuePermissions();</strong>
+<strong class="markLine">    qp.SharedAccessPolicies.Add(<span style="color:#8B0000">&quot;process&quot;</span>, <span style="color:#0000FF">new</span> SharedAccessQueuePolicy { Permissions = SharedAccessQueuePermissions.ProcessMessages | SharedAccessQueuePermissions.Read, SharedAccessExpiryTime = DateTime.UtcNow.AddMinutes(15) });</strong>
+<strong class="markLine">    queue.SetPermissions(qp);</strong>
+<strong class="markLine"></strong>
+<strong class="markLine">    <span style="color:#0000FF">var</span> token = queue.GetSharedAccessSignature(</strong>
+<strong class="markLine">                     <span style="color:#0000FF">new</span> SharedAccessQueuePolicy(),</strong>
+<strong class="markLine">                         <span style="color:#8B0000">&quot;process&quot;</span>);</strong>
+    <span style="color:#0000FF">this</span>.serviceQueueSasExpiryTime = DateTime.UtcNow.AddMinutes(15);
+    <span style="color:#0000FF">return</span> token;
+}
+</code></pre></li>
+<li><p>Add the following code to the <strong>Run</strong> method in the <strong>WorkerRole</strong> class in order to display the properties and metadata saved in the WebRole. Place them inside the <strong>if</strong> block, at the beginning.</p>
+
+<p>(Code Snippet - <em>GettingStartedWindowsAzureStorage</em> - <em>Ex5-RunMethodUpdate</em>)</p>
+
+<!-- mark:11-30 -->
+
+<span class="codelanguage">C#</span><pre><code class="C#">    <span style="color:#0000FF">public</span> <span style="color:#0000FF">override</span> <span style="color:#0000FF">void</span> Run()
+    {
+        ...
+
+        <span style="color:#0000FF">while</span> (<span style="color:#0000FF">true</span>)
+        {
+             ...
+
+             <span style="color:#0000FF">if</span> (msg != <span style="color:#0000FF">null</span>)
+             {
+<strong class="markLine">                  queue.FetchAttributes();</strong>
+<strong class="markLine"></strong>
+<strong class="markLine">                  <span style="color:#0000FF">var</span> messageParts = msg.AsString.Split(<span style="color:#0000FF">new</span> <span style="color:#0000FF">char</span>[] { &#39;,&#39; });</strong>
+<strong class="markLine">                  <span style="color:#0000FF">var</span> message = messageParts[0];</strong>
+<strong class="markLine">                  <span style="color:#0000FF">var</span> blobReference = messageParts[1];</strong>
+<strong class="markLine"></strong>
+<strong class="markLine">                  <span style="color:#0000FF">if</span> (queue.Metadata.ContainsKey(<span style="color:#8B0000">&quot;Resize&quot;</span>) &amp;&amp; <span style="color:#0000FF">string</span>.Equals(message, <span style="color:#8B0000">&quot;Photo Uploaded&quot;</span>))</strong>
+<strong class="markLine">                  {</strong>
+<strong class="markLine">                        <span style="color:#0000FF">var</span> maxSize = queue.Metadata[<span style="color:#8B0000">&quot;Resize&quot;</span>];</strong>
+<strong class="markLine"></strong>
+<strong class="markLine">                        Trace.TraceInformation(<span style="color:#8B0000">&quot;Resize is configured&quot;</span>);</strong>
+<strong class="markLine"></strong>
+<strong class="markLine">                        CloudBlockBlob outputBlob = <span style="color:#0000FF">this</span>.container.GetBlockBlobReference(blobReference);</strong>
+<strong class="markLine"></strong>
+<strong class="markLine">                        outputBlob.FetchAttributes();</strong>
+<strong class="markLine"></strong>
+<strong class="markLine">                        Trace.TraceInformation(<span style="color:#0000FF">string</span>.Format(<span style="color:#8B0000">&quot;Image ContentType: {0}&quot;</span>, outputBlob.Properties.ContentType)); </strong>
+<strong class="markLine">                        Trace.TraceInformation(<span style="color:#0000FF">string</span>.Format(<span style="color:#8B0000">&quot;Image width: {0}&quot;</span>, outputBlob.Metadata[<span style="color:#8B0000">&quot;Width&quot;</span>]));</strong>
+<strong class="markLine">                        Trace.TraceInformation(<span style="color:#0000FF">string</span>.Format(<span style="color:#8B0000">&quot;Image hieght: {0}&quot;</span>, outputBlob.Metadata[<span style="color:#8B0000">&quot;Height&quot;</span>])); </strong>
+<strong class="markLine">                  }</strong>
+
+                  Trace.TraceInformation(<span style="color:#0000FF">string</span>.Format(<span style="color:#8B0000">&quot;Message &#39;{0}&#39; processed.&quot;</span>, message));
+                  queue.DeleteMessage(msg);
+             }
+
+        }
+    }
+</code></pre></li>
+<li><p>Go the the Cloud project and right-click the <strong>QueueProcessor_WorkerRole</strong> role, located under the <strong>Roles</strong> folder and select <strong>Properties</strong>.</p>
+
+<p><img src="Images/workerrole-properties.png?raw=true" alt="WorkerRole Properties" title="WorkerRole Properties">
+</p>
+
+<p><em>WorkerRole Properties</em></p></li>
+<li><p>Click the <strong>Settings</strong> tab and add a new setting named <em>ContainerName</em> of <em>String</em> type and value <em>gallery</em>.</p>
+
+<p><img src="Images/settings-tab2.png?raw=true" alt="Settings tab" title="Settings tab">
+</p>
+
+<p><em>Settings tab</em></p></li>
+<li><p>Press <strong>Ctrl</strong> + <strong>S</strong> to save the settings.</p></li>
+</ol>
+
+<p><a name="Ex5Task4"></a></p>
+
+<h4 id="Task_4_-_Verification">Task 4 - Verification</h4>
+
+<ol>
+<li><p>Press <strong>F5</strong> to start debugging the solution.</p>
+<blockquote>
+<p><strong>Note</strong>: The Windows Azure Emulator should start.</p>
+</blockquote></li>
+<li><p>Login to the application with the user you created in Exercise 3.</p></li>
+<li><p>Click the <strong>Share</strong> link in one of the private photos you've uploaded before.</p>
+
+<p><img src="Images/sharing-a-photo-with-stored-access-policy.png?raw=true" alt="Sharing a photo with Stored Access Policy" title="Sharing a photo with Stored Access Policy">
+</p>
+
+<p><em>Sharing a photo with Stored Access Policy</em></p>
+<blockquote>
+<p><strong>Note</strong>: Notice how there's a new parameter in the query string named <em>si</em> that has the value <em>read</em> which is the Signed Identifier.</p>
+</blockquote></li>
+<li><p>Go back to the <strong>Index</strong> view and click on <strong>Create</strong>.</p></li>
+<li><p>Upload a new image of your choice.</p></li>
+<li><p>Open the compute emulator and check how the <strong>Properties</strong> and <strong>Metadata</strong> are logged by the Worker Role.</p>
+
+<p><img src="Images/compute-emulator-logs-in-worker-role.png?raw=true" alt="Compute Emulator logs in worker role" title="Compute Emulator logs in worker role">
+</p>
+
+<p><em>Compute Emulator logs in worker role</em></p></li>
+</ol>
+
+<hr>
+
+<p><a name="summary"></a></p>
+
+<h2 id="Summary">Summary</h2>
+
+<p>By completing this hands-on lab you have learned how to:</p>
+
+<ul>
+<li>Create a Storage Account.</li>
+<li>Enable Geo-Replication.</li>
+<li>Configure Monitoring metrics for your account.</li>
+<li>Configure Logging for each service.</li>
+<li>Consume Storage Services from a Web Application.</li>
+</ul>
+
+<hr>
+
+</div>
+</body>
+</html>

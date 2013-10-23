@@ -1,0 +1,2 @@
+﻿The solutions provided in this hands-on lab require that you create a database and provide a valid connection string in the Web.config file.
+Please follow the instructions in HOL.md before running the solutions.
